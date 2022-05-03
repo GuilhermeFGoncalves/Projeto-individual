@@ -1,0 +1,28 @@
+.div_banner{
+background-image: url();
+
+
+
+}
+
+.div_lateral{
+background-color: white;
+width: 32%;
+height: 700px;
+border-right: 1px rgb(170, 167, 167) solid;
+display: block;
+align-items: center;
+padding-left: 10px;
+
+}
+
+.div_lateral h3{
+font-weight: 300;
+
+}
+.div_lateral h2{
+font-weight: 400;
+
+
+
+}
