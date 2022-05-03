@@ -8,7 +8,7 @@
 .div_lateral {
     background-color: white;
     width: 32%;
-    height: 700px;
+    height: 100vh;
     border-right: 1px rgb(170, 167, 167) solid;
     display: flex;
     padding-left: 10px;
@@ -27,7 +27,7 @@
 }
 
 .btn_comecar {
-    height: 50px;
+    height: 100px;
     width: 140px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: 300ms;
@@ -43,7 +43,7 @@
 .btn_comecar:hover {
     border: 1px solid #EC5800;
     color: #EC5800;
-    width: 200px;
+    width: 170px;
 
 
 }

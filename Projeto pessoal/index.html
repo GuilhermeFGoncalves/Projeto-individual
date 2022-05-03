@@ -17,8 +17,8 @@
 
     <nav class="header">
         <div class="container_header">
-            <img id="logo" onmouseover="logo_over()" class="logo" src="img/electric-guitar-black.png" alt="">
-            <h5 class="atual">Sobre nos</h5>
+         <a href="index.html"><img  id="logo" onmouseout="logo_out()" onmouseover="logo_over()" class="logo" src="img/electric-guitar-black.png" alt="">
+         </a>   <h5 class="atual">Sobre nos</h5>
             <h5>Valores</h5>
             <h5>Musicas</h5>
             <h5>Tablaturas</h5>
@@ -41,7 +41,8 @@
                 <br>
                 <br>
                 <br>
-                <h2>Tudo termina agora<br></H2>
+                <h2>Tudo termina agora</H2>
+                    <h3>Agora você tem oque é preciso para tocar o quanto desejar</h3>
                 <br>
                 <br>
                 <h3> o Lost Music é uma plataforma de aprendizado<br>
@@ -75,10 +76,10 @@
 </html>
 <script>
     function logo_over() {
-
-
-
-
+        logo.src="img/electric-guitar.png"
+    }
+    function logo_out() {
+        logo.src="img/electric-guitar-black.png"
     }
 
 
