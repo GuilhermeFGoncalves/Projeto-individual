@@ -37,6 +37,7 @@
     font-size: 12pt;
     align-self: center;
     background-color: white;
+    transition: 150ms;
 }
 
 .btn_comecar:hover {
@@ -49,4 +50,9 @@
 
 .atual {
     font-weight: bolder;
+}
+a{
+text-decoration: none;
+
+
 }
