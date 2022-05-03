@@ -1,28 +1,52 @@
-.div_banner{
-background-image: url();
+.div_banner {
+    background-image: url();
 
 
 
 }
 
-.div_lateral{
-background-color: white;
-width: 32%;
-height: 700px;
-border-right: 1px rgb(170, 167, 167) solid;
-display: block;
-align-items: center;
-padding-left: 10px;
+.div_lateral {
+    background-color: white;
+    width: 32%;
+    height: 700px;
+    border-right: 1px rgb(170, 167, 167) solid;
+    display: flex;
+    padding-left: 10px;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-.div_lateral h3{
-font-weight: 300;
+.div_lateral h3 {
+    font-weight: 300;
 
 }
-.div_lateral h2{
-font-weight: 400;
+
+.div_lateral h2 {
+    font-weight: 400;
+}
+
+.btn_comecar {
+    height: 50px;
+    width: 140px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 300ms;
+    border: 1px solid rgb(94, 91, 91);
+    color: rgb(94, 91, 91);
+    cursor: pointer;
+    font-size: 12pt;
+    align-self: center;
+    background-color: white;
+}
+
+.btn_comecar:hover {
+    border: 1px solid #EC5800;
+    color: #EC5800;
+    width: 200px;
 
 
+}
 
+.atual {
+    font-weight: bolder;
 }
