@@ -1,3 +1,4 @@
+
 /* colors
 #EC5800 laranja
 rgb(94, 91, 91) cinza
@@ -127,4 +128,10 @@ body {
 .div_txt h5:hover {
   color: #ec5800;
   
+}
+a{
+text-decoration: none;
+
+
+
 }
