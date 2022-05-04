@@ -102,12 +102,66 @@ font-size: 10pt;
 
   }
 .musica_five_magics{
-background-color: yellow;
+background-color: black;
 height: 100%;
 width: 68%;
 display: none;
 justify-content: center;
 }
+.musica_seek{
+    background-color: rgb(230, 177, 177);
+    height: 100%;
+    width: 68%;
+    display: none;
+    justify-content: center;
+    }
+    .musica_abigail{
+        background-color: red;
+        height: 100%;
+        width: 68%;
+        display: none;
+        justify-content: center;
+        }
+        .rattlehead{
+            background-color: rgb(48, 110, 182);
+            height: 100%;
+            width: 68%;
+            display: none;
+            justify-content: center;
+        }
+        .hangar{
+            background-color: rgb(182, 59, 186);
+            height: 100%;
+            width: 68%;
+            display: none;
+            justify-content: center;
+        }
+        .ffwf{
+            background-color: rgb(34, 2, 35);
+            height: 100%;
+            width: 68%;
+            display: none;
+            justify-content: center;
+
+        }
+        .one_one_five{
+            background-color: rgb(91, 179, 36);
+            height: 100%;
+            width: 68%;
+            display: none;
+            justify-content: center;
+        }
+        
+    
+    
+
+
+
+
+
+
+
+
 
 .div_sem_musica{
 display: block;
