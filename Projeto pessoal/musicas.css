@@ -81,6 +81,8 @@
   background-color: rgb(231, 222, 222);
   color: #ec5800;
 }
+
+
 .div_musica h4 {
   font-weight: 300;
   margin: 0%;
@@ -105,3 +107,65 @@
 .div_sem_musica {
   display: block;
 }
+.capa_album{
+height: 200px;
+width: 200px;
+align-self: flex-end;
+
+}
+.div_titulo_capa{
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+padding-top: 22px;
+
+}
+.titulo_musica{
+font-size: 26pt;
+font-weight: 300;
+
+}
+.div_titulo_capa h3{
+font-weight: 300;
+justify-items: flex-start;
+font-size: 12pt;
+color: cornflowerblue;
+
+
+}
+.semi_header{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+}
+.semi_header h3{
+font-weight: 300;
+color: #ec5800;
+transition: 300ms;
+
+
+}
+.semi_header h3:hover{
+text-decoration: underline;
+cursor: pointer;
+
+
+
+}
+
+
+.musica_display_select span{
+text-indent: 40px;
+font-size: 22pt;
+}
+.sobre{
+font-weight: 300;
+font-size: 9pt;
+
+
+
+}
+
+
+

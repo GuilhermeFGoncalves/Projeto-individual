@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musicas | Lost Music</title>
-    <link rel="stylesheet"
-        href="C:\Users\Aluno\Desktop\Arquivos Temporários\Projeto-individual\Projeto pessoal\css_geral.css">
-    <link rel="stylesheet"
-        href="C:\Users\Aluno\Desktop\Arquivos Temporários\Projeto-individual\Projeto pessoal\musicas.css">
+    <link rel="stylesheet" href="D:\Trabalhos SPTECH\Projeto-individual\Projeto pessoal\css_geral.css">
+    <link rel="stylesheet" href="D:\Trabalhos SPTECH\Projeto-individual\Projeto pessoal\musicas.css">
 </head>
 
 <body>
@@ -36,10 +34,10 @@
         </div>
     </nav>
 
-  
-  
+
+
     <!-- banner -->
-    <div class="div_banner">
+    <div  id="banner" class="div_banner">
         <div class="div_lateral">
             <h3>Musicas</h3>
 
@@ -47,6 +45,9 @@
                 <h4>Five Magics</h4>
                 <h6>Megadeth</h6>
             </div>
+
+
+
 
             <div onclick="seek()" class="div_musica">
                 <h4>Seek n' Destroy</h4>
@@ -68,7 +69,7 @@
                 <h6>Megadeth</h6>
             </div>
 
-            <div  onclick="ffwf()" class="div_musica">
+            <div onclick="ffwf()" class="div_musica">
                 <h4>Fight Fire With Fire</h4>
                 <h6>Metallica</h6>
             </div>
@@ -77,80 +78,109 @@
                 <h4>115</h4>
                 <h6>Elena sigma</h6>
             </div>
-            <button class="btn_add" >Dar sugestão</button>
+            <button class="btn_add">Dar sugestão</button>
 
 
 
         </div>
-  <!-- Div direita -->
-  <div  class="div_direita">
-      
-      <div  id="div_sem_musica" class="div_sem_musica">
-    <H1> 
-        Agora escolha uma musica
-        <br>
-        <br>
-        <br>
-        <br>  
-        Vamos começar?<br> 
-        Peguem as guitarras <br>
-        liguem os amplificadores<br>
-        e que comece o barulho! <br>
+        <!-- Div direita -->
+        <div class="div_direita">
 
-    
-</div>
-</H1>
-<div  id="five_magics" class="musica_display_select">
-<h1>ss</h1>
-</div>
-<div  id="seek_n_destroy" class="musica_display_select">
-    <h1>a</h1></div>
-<div  id="abigail" class="musica_display_select">
-    <h1>c</h1></div>
-<div  id="rattlehead" class="musica_display_select">
-    <h1>h</h1></div>
-<div  id="hangar" class="musica_display_select">
-    <h1>i</h1></div>
-<div  id="ffwf" class="musica_display_select">
-    <h1>çç</h1></div>
-<div  id="115" class="musica_display_select">
-    <h1>oo</h1></div>
+            <div id="div_sem_musica" class="div_sem_musica">
+                <H1>
+                    Agora escolha uma musica
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    Vamos começar?<br>
+                    Peguem as guitarras <br>
+                    liguem os amplificadores<br>
+                    e que comece o barulho! <br>
 
 
+            </div>
+            </H1>
+            <div id="five_magics" class="musica_display_select">
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Five Magics
+                        <h3>Megadeth</h3></span>
+                    <img class="capa_album"
+                        src="https://lastfm.freetls.fastly.net/i/u/770x0/4d7e0648ae8e03071b12aad5c15919c3.jpg" alt="">
 
-
-  </div>
-  
-  
-  
-  
-  
-  
-    </div>
-    
-    
-    
-    
-    <!-- footer -->
-        <div class="footer">
-            <div class="container_footer">
-
-
-                <div class="div_social">
-                    <img class="logo_social" src="img/whatsapp.png" alt="">
-                    <img class="logo_social" src="img/instagram.png" alt="">
-                    <img class="logo_social" src="img/facebook (1).png" alt="">
-                </div><br>
-
-                <div class="div_txt">
-                    <h5> Suporte</h5>
-                    <h5>INFO</h5>
-                    <h5>INFO</h5>
                 </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=WkXAAHDIN7U"><h3>Escutar</h3></a>
+                    <a href="https://pt.wikipedia.org/wiki/Rust_in_Peace"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span style="font-size: 14pt;font-weight: 300;" >
+                    Five magics é a quinta faixa do album premiado da banda americana de thrash metal megadeth
+                     </span>
+                    
 
 
 
             </div>
+            <div id="seek_n_destroy" class="musica_display_select">
+                <h1>a</h1>
+            </div>
+            <div id="abigail" class="musica_display_select">
+                <h1>c</h1>
+            </div>
+            <div id="rattlehead" class="musica_display_select">
+                <h1>h</h1>
+            </div>
+            <div id="hangar" class="musica_display_select">
+                <h1>i</h1>
+            </div>
+            <div id="ffwf" class="musica_display_select">
+                <h1>çç</h1>
+            </div>
+            <div id="115" class="musica_display_select">
+                <h1>oo</h1>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container_footer">
+
+
+            <div class="div_social">
+                <img class="logo_social" src="img/whatsapp.png" alt="">
+                <img class="logo_social" src="img/instagram.png" alt="">
+                <img class="logo_social" src="img/facebook (1).png" alt="">
+            </div><br>
+
+            <div class="div_txt">
+                <h5> Suporte</h5>
+                <h5>INFO</h5>
+                <h5>INFO</h5>
+            </div>
+
+
+
+        </div>
 
 
 
@@ -160,7 +190,6 @@
 
 </html>
 <script>
-
     function logo_over() {
         logo.src = "img/electric-guitar.png"
     }
@@ -168,7 +197,8 @@
     function logo_out() {
         logo.src = "img/electric-guitar-black.png"
     }
-    function five_magics(){
+
+    function five_magics() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("seek_n_destroy").style.display = "none";
         document.getElementById("abigail").style.display = "none";
@@ -176,10 +206,11 @@
         document.getElementById("hangar").style.display = "none";
         document.getElementById("ffwf").style.display = "none";
         document.getElementById("115").style.display = "none";
-    
+
         document.getElementById("five_magics").style.display = "block"
     }
-    function seek(){
+
+    function seek() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("five_magics").style.display = "none";
         document.getElementById("abigail").style.display = "none";
@@ -187,11 +218,12 @@
         document.getElementById("hangar").style.display = "none";
         document.getElementById("ffwf").style.display = "none";
         document.getElementById("115").style.display = "none";
-    
+
         document.getElementById("seek_n_destroy").style.display = "block"
-      
+
     }
-    function abigail(){
+
+    function abigail() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("five_magics").style.display = "none";
         document.getElementById("seek_n_destroy").style.display = "none";
@@ -199,10 +231,11 @@
         document.getElementById("hangar").style.display = "none";
         document.getElementById("ffwf").style.display = "none";
         document.getElementById("115").style.display = "none";
-    
+
         document.getElementById("abigail").style.display = "block"
     }
-    function rattlehead(){
+
+    function rattlehead() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("five_magics").style.display = "none";
         document.getElementById("seek_n_destroy").style.display = "none";
@@ -210,10 +243,11 @@
         document.getElementById("hangar").style.display = "none";
         document.getElementById("ffwf").style.display = "none";
         document.getElementById("115").style.display = "none";
-    
+
         document.getElementById("rattlehead").style.display = "block"
     }
-    function hangar(){
+
+    function hangar() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("five_magics").style.display = "none";
         document.getElementById("seek_n_destroy").style.display = "none";
@@ -221,11 +255,12 @@
         document.getElementById("rattlehead").style.display = "none";
         document.getElementById("ffwf").style.display = "none";
         document.getElementById("115").style.display = "none";
-    
+
         document.getElementById("hangar").style.display = "block"
 
     }
-    function ffwf(){
+
+    function ffwf() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("five_magics").style.display = "none";
         document.getElementById("seek_n_destroy").style.display = "none";
@@ -233,10 +268,11 @@
         document.getElementById("rattlehead").style.display = "none";
         document.getElementById("hangar").style.display = "none";
         document.getElementById("115").style.display = "none";
-    
+
         document.getElementById("ffwf").style.display = "block"
     }
-    function one_one_five(){
+
+    function one_one_five() {
         document.getElementById("div_sem_musica").style.display = "none";
         document.getElementById("five_magics").style.display = "none";
         document.getElementById("seek_n_destroy").style.display = "none";
@@ -244,7 +280,14 @@
         document.getElementById("rattlehead").style.display = "none";
         document.getElementById("hangar").style.display = "none";
         document.getElementById("ffwf").style.display = "none";
-    
+
         document.getElementById("115").style.display = "block"
+    }
+    function aprender(){
+        document.getElementById("banner").style.display = "none"
+
+
+
+
     }
 </script>
