@@ -8,6 +8,7 @@
     <title>Musicas | Lost Music</title>
     <link rel="stylesheet" href="D:\Trabalhos SPTECH\Projeto-individual\Projeto pessoal\css_geral.css">
     <link rel="stylesheet" href="D:\Trabalhos SPTECH\Projeto-individual\Projeto pessoal\musicas.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -65,8 +66,8 @@
             </div>
 
             <div onclick="hangar()" class="div_musica">
-                <h4>Hangar 18</h4>
-                <h6>Megadeth</h6>
+                <h4>Piranha</h4>
+                <h6>Exodus</h6>
             </div>
 
             <div onclick="ffwf()" class="div_musica">
@@ -75,8 +76,8 @@
             </div>
 
             <div onclick="one_one_five()" class="div_musica">
-                <h4>115</h4>
-                <h6>Elena sigma</h6>
+                <h4>Painkiller</h4>
+                <h6>Judas Priest</h6>
             </div>
             <button class="btn_add">Dar sugestão</button>
 
@@ -103,7 +104,7 @@
             </H1>
             <div id="five_magics" class="musica_display_select">
                 <div class="div_titulo_capa">
-                    <span class="titulo_musica">Five Magics
+                    <span  class="titulo_musica">Five Magics
                         <h3>Megadeth</h3></span>
                     <img class="capa_album"
                         src="https://lastfm.freetls.fastly.net/i/u/770x0/4d7e0648ae8e03071b12aad5c15919c3.jpg" alt="">
@@ -119,31 +120,181 @@
                     <h3></h3>
 
                 </div>
-                <span style="font-size: 14pt;font-weight: 300;" >
-                    Five magics é a quinta faixa do album premiado da banda americana de thrash metal megadeth
+                <span class="sobre_musica">
+                    Five magics é a quinta faixa do album premiado <i>Rust in peace</i> da banda americana de thrash metal <i>Megadeth</i> Com uma bass line marcante e estrutura flexivel se tornou uma das joias do album.
                      </span>
+                     <div class="chart" >
+                        <canvas  id="myChart"></canvas>
+                      </div>
+                       
                     
 
 
 
             </div>
+
+
+          
+           
+           
+           
             <div id="seek_n_destroy" class="musica_display_select">
-                <h1>a</h1>
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Seek 'n Destroy
+                        <h3>Metallica</h3></span>
+                    <img class="capa_album"
+                        src="https://upload.wikimedia.org/wikipedia/pt/c/c7/KillEmAll.jpg" alt="">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=Wm58sGEdgAw"><h3>Escutar</h3></a>
+                    <a href="https://pt.wikipedia.org/wiki/Kill_%27Em_All"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span class="sobre_musica" >
+                    <i>Seek 'n Destroy</i> é a musica mais lembrada do debut do <i>Metallica</i> ,<i> Kill 'em All</i> é ate hoje a musica que encerra seus shows.
+                     </span>
+                     <div class="chart" >
+                        <canvas  id="myChart2"></canvas>
+                      </div>
+                       
+                    
+
+
+
             </div>
+            
+     
             <div id="abigail" class="musica_display_select">
-                <h1>c</h1>
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Abigail
+                        <h3>King Diamond</h3></span>
+                    <img class="capa_album"
+                        src="https://upload.wikimedia.org/wikipedia/en/8/8b/Abigail_%28King_Diamond_album%29.jpg" alt="">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=17cEKQL26Fw"><h3>Escutar</h3></a>
+                    <a href="https://en.wikipedia.org/wiki/Abigail_(album)"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span class="sobre_musica">
+                    <i>Abigail</i> é um album renomado da carreira solo de <i>King Diamond</i> onde o album possui um roteiro onde interliga todas faixas em uma historia, 
+                    <i>Abigail</i> a faixa, é o climax onde o demonio possui o corpo da protagonista.
+                     </span>
+                     <div class="chart" >
+                        <canvas  id="myChart3"></canvas>
+                      </div>
             </div>
             <div id="rattlehead" class="musica_display_select">
-                <h1>h</h1>
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Rattlehead
+                        <h3>Megadeth</h3></span>
+                    <img class="capa_album"
+                        src="https://m.media-amazon.com/images/I/81BNSHhbS6L._AC_SY450_.jpg" alt="">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=ECGp4ibz7A8"><h3>Escutar</h3></a>
+                    <a href="https://pt.wikipedia.org/wiki/Killing_Is_My_Business..._and_Business_Is_Good!"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span class="sobre_musica">
+                    <i>Rattlehead</i> é um apelido do mascote da banda <i>Vic Rattlehead</i>, com sua velocidade insana e riffs com centenas de notas essa musica ficou conhecida como uma das mais dificeis de se tocar da banda e da historia. 
+                     </span>
+                     <div class="chart" >
+                        <canvas  id="myChart4"></canvas>
+                      </div>
             </div>
             <div id="hangar" class="musica_display_select">
-                <h1>i</h1>
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Piranha
+                        <h3>Exodus</h3></span>
+                    <img class="capa_album"
+                        src="https://images-na.ssl-images-amazon.com/images/I/81TtFt-15eL.jpg" alt="">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=LY1opvOcS9Q"><h3>Escutar</h3></a>
+                    <a href="https://en.wikipedia.org/wiki/Bonded_by_Blood"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span class="sobre_musica">
+                    Retratando o animal conhecido brasileiro. <i>Piranha</i> é uma faixa nervosa e brutal, que exemplifica bem a crueldade do animal com seus riffs cortantes.
+                     </span>
+                     <div class="chart" >
+                        <canvas  id="myChart5"></canvas>
+                      </div>
             </div>
             <div id="ffwf" class="musica_display_select">
-                <h1>çç</h1>
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Fight Fire With Fire
+                        <h3>Metallica</h3></span>
+                    <img class="capa_album"
+                        src="https://m.media-amazon.com/images/I/716FcW7qgSL._AC_SL1200_.jpg" alt="">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=xeK1E1HaMdY"><h3>Escutar</h3></a>
+                    <a href="https://pt.wikipedia.org/wiki/Ride_the_Lightning"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span class="sobre_musica">
+                    Musica que abrem albuns de metal são conhecidas por serem rapidas e mostrar como vai ser o ritimo do album, com <i>Fight Fire With Fire</i> não é diferente muito pelo contrario essa musica é conhecida como um exemplo de uma otima opener.
+                     </span>
+                     <div class="chart" >
+                        <canvas  id="myChart6"></canvas>
+                      </div>
             </div>
             <div id="115" class="musica_display_select">
-                <h1>oo</h1>
+                <div class="div_titulo_capa">
+                    <span class="titulo_musica">Painkiller
+                        <h3>Judas Priest</h3></span>
+                    <img class="capa_album"
+                        src="https://img.discogs.com/4VD0F7-Qe_ptJKTKVvliSfVUKI4=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-14357696-1572894675-5791.jpeg.jpg" alt="">
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="semi_header">
+                    <h3 onclick="aprender()" >Aprender</h3>
+                    <a href="https://www.youtube.com/watch?v=nM__lPTWThU"><h3>Escutar</h3></a>
+                    <a href="https://pt.wikipedia.org/wiki/Painkiller_(%C3%A1lbum_de_Judas_Priest)"><h3>Sobre</h3></a>
+                    <h3></h3>
+
+                </div>
+                <span class="sobre_musica">
+                    Considerada por muitos o hino do <i>Heavy Metal</i> <i>Painkiller</i>, tem uma introdução na bateria que desde o inicio se tornou iconica, e um riff de quebrar o pescoço.
+                     </span>
+                     <div class="chart" >
+                        <canvas  id="myChart7"></canvas>
+                      </div>
             </div>
 
 
@@ -187,6 +338,206 @@
 
 
 </body>
+<script>
+    const labels = [
+      'Palhetada',
+      'Estamina',
+      'legato',
+      'Velocidade',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [8,4,4,6 ],
+      }]
+    };
+    const data2 = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [3,6,7,5 ],
+      }]
+    };
+    
+    const data3 = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [6,4,8,8],
+      }]
+    };
+    
+    const data4 = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [8,10,8,10],
+      }]
+    };
+    const data5 = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [6,8,2,8],
+      }]
+    };
+    const data6 = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [9,9,3,10],
+      }]
+    };
+    const data7 = {
+      labels: labels,
+      datasets: [{
+        label: 'Dificuldade',
+        backgroundColor: 'rgba(255, 0, 0,0.4)',
+        borderColor: 'rgba(255,0, 0,0.7)',
+        data: [7,7,8,8],
+      }]
+    };
+  
+    const config = {
+      type: 'radar',
+      data: data,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+    
+  
+    const config2 = {
+      type: 'radar',
+      data: data2,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+    
+    const config3 = {
+      type: 'radar',
+      data: data3,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+    
+    const config4 = {
+      type: 'radar',
+      data: data4,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+     
+    const config5 = {
+      type: 'radar',
+      data: data5,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+      
+    const config6 = {
+      type: 'radar',
+      data: data6,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+       
+    const config7 = {
+      type: 'radar',
+      data: data7,
+      options: {
+        r: {
+          max: 10,
+          min: 0,
+          scales:{
+              
+          }
+      }}
+    };
+  </script>
+ <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+     
+    const myChart3= new Chart(
+      document.getElementById('myChart3'),
+      config3
+    );
+    const myChart4= new Chart(
+      document.getElementById('myChart4'),
+      config4
+    );
+    const myChart5= new Chart(
+      document.getElementById('myChart5'),
+      config5
+    );
+    const myChart6= new Chart(
+      document.getElementById('myChart6'),
+      config6
+    );
+    const myChart7= new Chart(
+      document.getElementById('myChart7'),
+      config7
+    );
+  </script>
+       
+
 
 </html>
 <script>

@@ -121,8 +121,9 @@ padding-top: 22px;
 
 }
 .titulo_musica{
-font-size: 26pt;
-font-weight: 300;
+font-size: 22pt;
+font-weight: 100;
+
 
 }
 .div_titulo_capa h3{
@@ -155,15 +156,27 @@ cursor: pointer;
 }
 
 
-.musica_display_select span{
-text-indent: 40px;
-font-size: 22pt;
-}
+
 .sobre{
 font-weight: 300;
 font-size: 9pt;
 
 
+
+}
+.chart{
+width:300px;
+height:300px;
+
+}.sobre_musica{
+float: left;
+text-indent: 100px;
+padding-left: 50px;
+padding-bottom: 20px;
+}
+i{
+color: black;
+font-weight: 300;
 
 }
 
