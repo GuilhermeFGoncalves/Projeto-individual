@@ -94,3 +94,45 @@ cursor: pointer;
 a {
   text-decoration: none;
 }
+
+.btn_add {
+  height: 50px;
+  width: 140px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 300ms;
+  color: white;
+  cursor: pointer;
+  font-size: 12pt;
+  align-self: center;
+  background-color: #ec5800;
+  transition: 150ms;
+  border: 1px solid #ec5800;
+  border-radius: 55px;
+  margin-top: 30px;
+}
+
+.btn_add:hover {
+  color: white;
+  width: 170px;
+}
+
+.btn_contato {
+  height: 50px;
+  width: 160px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 300ms;
+  color: white;
+  cursor: pointer;
+  font-size: 12pt;
+  align-self: center;
+  background-color: #ec5800;
+  transition: 150ms;
+  border: 1px solid #ec5800;
+  border-radius: 55px;
+  margin-top: 30px;
+}
+
+.btn_contato:hover {
+  color: white;
+  width: 190px;
+}
