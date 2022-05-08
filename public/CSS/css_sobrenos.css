@@ -1,0 +1,96 @@
+.div_banner {
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.div_lateral {
+  background-color: white;
+  width: 32%;
+  height: 93%;
+  border-right: 1px rgb(170, 167, 167) solid;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div_lateral h3 {
+  font-weight: 300;
+  text-indent: 30px;
+}
+
+.div_lateral h2 {
+  font-weight: 400;
+}
+.div_direita {
+  width: 68%;
+  height: 100vh;
+}
+.div_direita{
+height: 100%;
+width: 68%;
+background-image: url(/public/img/shows-coronavirus.jpg);
+background-size: cover;
+display: flex;
+align-items: initial;
+justify-content: center;
+}
+.div_direita span{
+color: white;
+font-weight: 100;
+font-size: 22pt;
+margin-top: 200px;
+cursor: pointer;
+}
+
+  
+
+.btn_comecar {
+  height: 50px;
+  width: 140px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 300ms;
+  border: 1px solid rgb(94, 91, 91);
+  color: rgb(94, 91, 91);
+  cursor: pointer;
+  font-size: 12pt;
+  align-self: center;
+  background-color: white;
+  transition: 150ms;
+}
+
+.btn_comecar:hover {
+  border: 1px solid #ec5800;
+  color: #ec5800;
+  width: 170px;
+}
+.btn_comecar_show {
+    height: 50px;
+    width: 140px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: 300ms;
+    border: 1px solid rgb(94, 91, 91);
+    color: rgb(94, 91, 91);
+    cursor: pointer;
+    font-size: 12pt;
+    align-self: center;
+    background-color: white;
+    transition: 150ms;
+    display: none;
+  }
+  
+  .btn_comecar_show:hover {
+    border: 1px solid #ec5800;
+    color: #ec5800;
+    width: 170px;
+  }
+
+.atual {
+  font-weight: bolder;
+}
+a {
+  text-decoration: none;
+}

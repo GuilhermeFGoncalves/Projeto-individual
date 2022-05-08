@@ -1,0 +1,103 @@
+.banner_tab{
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: row;
+}
+.riff_selector{
+height: 100%;
+width: 30%;
+border: 1px solid rgb(94, 91, 91) ;
+border-bottom: 0ch;
+border-top: 0ch;
+
+}
+.riff_select_container{
+width:  100%;
+height:  10%;
+transition: 400ms;
+display: flex;
+justify-content: center;
+cursor: pointer;
+
+}
+.riff_select_container:hover{
+background-color: rgba(255, 255, 255, 0.411);    
+color: #EC5800;
+border-radius: 100px;
+border: 1px solid #EC5800;
+    }
+.container_video_dados{
+width: 100%;
+height: 300px;
+display: flex;
+justify-content: space-around;
+}
+.riff_selector h1{
+margin: 0%;
+font-weight: 300;
+color: #EC5800;
+text-align: center;
+
+
+}
+.name_riff{
+font-weight: 300;
+font-size: 26pt;
+}
+
+.container_riff_dica{
+width: 50%;
+height: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+
+}
+.div_dica{
+background-color: white;
+width: 60%;
+height: 30%;
+border: 1px solid #EC5800;
+
+}
+.span_dica{
+font-weight: 300;
+font-size: 95%;
+text-indent: 20px;
+float: left;
+margin: 9px;
+
+
+}
+.tablatura{
+width: 100%;
+height: 50%;
+margin: 0% auto;
+padding-left: 50px;
+
+}
+.div_direita_musica{
+height: 100%;
+width: 70%;
+display: none;
+
+}
+
+.parte_musica{
+font-weight: 300;
+text-align: center;
+}
+.sem_riff{
+font-weight: 300;
+font-size: 22pt;
+display: flex;
+align-items: center;
+text-indent: 200px;
+
+
+}
+
+
+
