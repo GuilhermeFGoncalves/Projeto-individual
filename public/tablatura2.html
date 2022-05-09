@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost music</title>
+
+    <link rel="stylesheet" href="CSS/css_geral.css">
+    <link rel="stylesheet" href="CSS/tablatura.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+
+    <nav id="header" class="header">
+        <div class="container_header">
+            <a href="index-logado.html"><img id="logo" onmouseout="logo_out()" onmouseover="logo_over()" class="logo"
+                    src="img/electric-guitar-black.png" alt="">
+            </a>
+            <h5 class="atual">Sobre nos</h5>
+            <h5>Valores</h5>
+            <a href="musicas.html">
+                <h5>Musicas</h5>
+            </a>
+          
+            <div class="div_search">
+                <input class="search" type="text">
+                <img class="lupa_search" src="img/lupa-arredondada.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <!-- banner -->
+    <div class="banner_tab">
+        <div class="riff_selector">
+            <h1>Riffs e Partes</h1>
+            <div  onclick="riff1()" class="riff_select_container">
+                <h3  class="parte_musica">Riff intro</h3>
+            </div>
+            <div onclick="riff2()" class="riff_select_container">
+                <h3  class="parte_musica">Harmonia</h3>
+            </div>
+            <div onclick="riff3()" class="riff_select_container">
+                <h3 class="parte_musica">Aperggio</h3>
+            </div>
+            <div onclick="riff4()" class="riff_select_container">
+                <h3  class="parte_musica">Bridge</h3>
+            </div>
+            <div onclick="riff5()" class="riff_select_container">
+                <h3 class="parte_musica">Verse</h3>
+            </div>
+            <div onclick="riff6()" class="riff_select_container">
+                <h3 class="parte_musica">Arpeggio/Base solo</h3>
+            </div>
+            <div onclick="riff7()" class="riff_select_container">
+                <h3 class="parte_musica">Breakdown</h3>
+            </div>
+            <div onclick="riff8()" class="riff_select_container">
+                <h3 class="parte_musica">Pre-Solo</h3>
+            </div>
+        </div>
+<div  id="sem_riff" class="sem_riff">Comece escolhendo uma parte da musica</div>
+        <div id="riff1" class="div_direita_musica">
+
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Intro</h1>
+                    
+                    <div class="div_dica">
+                        <span class="span_dica">O primeiro riff e o mais dificil da nusica inteira pela sua velocidade
+                            <br>então use pull offs para não ter que palhetar tudo.</span>
+                    </div>
+                    <span>Afinação   (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/riff intro .mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 80%;" src="img/five magics tab/intro tab 5 magics png.png" alt="">
+                <img style="width: 80%;" src="img/five magics tab/intro pt 2png.png" alt="">
+            </div>
+
+        </div>
+        <div id="riff2" class="div_direita_musica">
+
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Harmonia</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">A harmonia tem que estar extremamente sincronizada com a linha de baixo e com a bateria para soar bem, e os vibratos tem que ser fortes.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/Harmonia .mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 50%;" src="img/five magics tab/harmonia.png" alt=""><br>
+            </div>
+
+        </div>
+        <div id="riff3" class="div_direita_musica">
+
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Arpeggio</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">Tente usar o sweep picking o quanto conseguir para facilitar o arpeggio.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/Arpeggio.mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 50%;" src="img/five magics tab/arrpegio.png" alt="">
+            </div>
+
+        </div>
+        <div id="riff4" class="div_direita_musica">
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Bridge</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">Não deixe a guitarra soar tanto use sua mão direita para mutar todas as notas.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/Bridge.mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 80%;" src="img/five magics tab/bridge.png" alt="">
+            </div>
+
+        </div>
+        <div id="riff5" class="div_direita_musica">
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Verse</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">Mantenha sua palhetada o mais precisa possivel e so palhete para baixo para dar peso.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/verse.mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 80%;" src="img/five magics tab/verse.png" alt="">
+            </div>
+
+        </div>
+        <div id="riff6" class="div_direita_musica">
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Arpeggio/Base solo</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">Treine bastante a palhetada alternada nesse riff você vai precisar.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/arpeggio 2.mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 80%;" src="img/five magics tab/arpeggio 2.png" alt="">
+                <img style="width: 80%;" src="img/five magics tab/arpeggio2 2 .png" alt="">
+            </div>
+
+
+        </div>
+        <div id="riff7" class="div_direita_musica">
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Breakdown</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">Treine bastante a palhetada alternada nesse riff você vai precisar.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/breakdown.mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 80%;" src="img/five magics tab/breakdown.png" alt="">
+                <img style="width: 80%;" src="img/five magics tab/breakdown2.png" alt="">
+            </div>
+
+
+        </div>
+        <div id="riff8" class="div_direita_musica">
+            <div class="container_video_dados">
+                <div class="container_riff_dica">
+                    <h1 id="name_riff" class="name_riff">Pre-solo</h1>
+                    <div class="div_dica">
+                        <span class="span_dica">É muito importante usar spider chord nesse Riff se não ele pode se tornar quase impossivel.</span>
+                    </div>
+                    <span>Afinação (E A D G B E)  Tom : E<br>
+                    </span>
+                </div>
+
+                <video width="320" height="240" controls src="videos/Five magics/pre-solo.mp4"></video>
+            </div>
+
+            <div class="tablatura">
+                <img style="width: 80%;" src="img/five magics tab/pre-solo.png" alt="">
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container_footer">
+
+
+            <div class="div_social">
+                <img class="logo_social" src="img/whatsapp.png" alt="">
+                <img class="logo_social" src="img/instagram.png" alt="">
+                <img class="logo_social" src="img/facebook (1).png" alt="">
+            </div><br>
+
+            <div class="div_txt">
+                <h5> Suporte</h5>
+                <h5>INFO</h5>
+                <h5>INFO</h5>
+            </div>
+
+
+
+        </div>
+
+
+
+
+</body>
+
+</html>
+<script>
+    function logo_over() {
+        logo.src = "img/electric-guitar.png"
+    }
+
+    function logo_out() {
+        logo.src = "img/electric-guitar-black.png"
+    }
+
+    function banner_over() {
+        show.style.backgroundImage =
+            "url(https://m1newstv.com/storage/2019/01/m1newstv_rock_facenews.gif)";
+        txt_banner_direita.innerHTML =
+            " Viva os melhores momentos de adorar a musica<br>"
+        btn_none.style.Display = "flex"
+
+    }
+
+    function banner_out() {
+        show.style.backgroundImage =
+            "url(img/shows-coronavirus.jpg)";
+        txt_banner_direita.innerHTML = "Toque como seus herois"
+
+
+    }
+
+    function riff1() {
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff1").style.display = "block"
+
+    }
+
+    function riff2() {
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff2").style.display = "block"
+
+
+    }
+    function riff3(){
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff3").style.display = "block"
+
+
+
+    }
+    function riff4(){
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff4").style.display = "block"
+
+    }
+    function riff5(){
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff5").style.display = "block"
+
+
+
+    }
+    function riff6(){
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff6").style.display = "block"
+
+
+    }
+    function riff7(){
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff8").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff7").style.display = "block"
+
+    }
+    function riff8(){
+        document.getElementById("sem_riff").style.display = "none"
+        document.getElementById("riff1").style.display = "none"
+        document.getElementById("riff7").style.display = "none"
+        document.getElementById("riff5").style.display = "none"
+        document.getElementById("riff6").style.display = "none"
+        document.getElementById("riff4").style.display = "none"
+        document.getElementById("riff3").style.display = "none"
+        document.getElementById("riff2").style.display = "none"
+        document.getElementById("riff8").style.display = "block"
+
+
+    }
+</script>
