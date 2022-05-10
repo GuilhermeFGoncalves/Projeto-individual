@@ -94,9 +94,53 @@ function cadastrar(req, res) {
     }
 }
 
+function sugestao(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var usuario = req.body.nomeServer;
+    var email = req.body.emailServer;
+    var url = req.body.urlServer;
+    var banda = req.body.bandaServer;
+    var musica = req.body.musicaServer;
+    var estilo = req.body.estiloServer;
+    var id = req.body.idServer;
+
+    // Faça as validações dos valores
+    if (usuario == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (url == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else if (banda == undefined) {
+        res.status(403).send("O id do usuário está indefinido!");
+    }else if (musica == undefined) {
+        res.status(403).send("O id do usuário está indefinido!");
+    }else if (estilo == undefined) {
+        res.status(403).send("O id do usuário está indefinido!");
+    }else {
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.sugestao(usuario, email, url,banda,musica,estilo,id)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    sugestao
 }

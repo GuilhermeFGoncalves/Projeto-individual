@@ -1,145 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lost music</title>
 
-    <link rel="stylesheet" href="CSS/sugestao.css">
-    <link rel="stylesheet" href="CSS/css_geral.css">
+    <link rel="stylesheet" href="CSS/sugestao.css" />
+    <link rel="stylesheet" href="CSS/css_geral.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Header -->
 
     <nav id="header" class="header">
-        <div class="container_header">
-            <a href="index-logado.html"><img id="logo" onmouseout="logo_out()" onmouseover="logo_over()" class="logo"
-                    src="img/electric-guitar-black.png" alt="">
-            </a>
-            <h5 class="atual">Sobre nos</h5>
-            <h5>Valores</h5>
-            <a href="musicas.html">
-                <h5>Musicas</h5>
-            </a>
-          
+      <div class="container_header">
+        <a href="index-logado.html"
+          ><img
+            id="logo"
+            onmouseout="logo_out()"
+            onmouseover="logo_over()"
+            class="logo"
+            src="img/electric-guitar-black.png"
+            alt=""
+          />
+        </a>
+        <h5 class="atual">Sobre nos</h5>
+        <h5>Valores</h5>
+        <a href="musicas.html">
+          <h5>Musicas</h5>
+        </a>
 
-            <div class="div_search">
-                <input class="search" type="text">
-                <img class="lupa_search" src="img/lupa-arredondada.png" alt="">
-            </div>
+        <div class="div_search">
+          <input class="search" type="text" />
+          <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
         </div>
+      </div>
     </nav>
 
-
     <!-- banner -->
-    <div style="background-image:url(img/1280px-Megadeth1991AL.jpg) ;" class="banner">
-        <div class="container_sug">
-            <div class="container_esq">
-                <div class="div_titulo">Preencha o formulario</div>
-                <div class="div_inp">
-                    Email: <input class="inp_sug" type="text" name="" id="">
-                </div>
-                <div class="div_inp">
-                    Nome <input class="inp_sug" type="text" name="" id="">
-                </div>
-                <div class="div_inp">
-                    Url :<input class="inp_sug" type="text" name="" id="url">
-                </div>
-                <div class="div_inp">
-                    Banda :<input class="inp_sug" type="text" name="" id="banda_inp">
-                </div>
-                <div class="div_inp">
-                    Musica :<input class="inp_sug" type="text" name="" id="musica_inp">
-                </div>
-                <div class="div_combo">
-                    <select class="select" name="estilo" id="">
-                        <option selected-disable value="">Genero</option>
-                        <option value="">Heavy Metal</option>
-                        <option value="">Thrash Metal</option>
-                        <option value="">Black Metal</option>
-                        <option value="">Nu Metal</option>
-                        <option value="">Power Metal</option>
-                        <option value="">Death Metal</option>
-                        <option value="">Outro</option>
-                    </select>
-                </div>
-                <button onclick="verificar()" class="btn_enviar">Verificar</button>
-            </div>
-            <div  class="container_dir">
-                <div id="container_dir" class="container_video">
-                    <div class="div_titulo">Obrigado pela sugestão</div>
-                    <span>Essa é a musica procurada?</span>
-                    <h4 id="musica_banda" ></h4>
-                </div>
-            </div>
+    <div  style="background-image: url(img/1280px-Megadeth1991AL.jpg)"
+      class="banner"
+    >
+      <div id="alert_erro" class="alert_erro">
+        <h4 id="txt_alert_erro"></h4>
+      </div>
+      <div class="container_sug">
+        <div class="container_esq">
+          <div class="div_titulo">Preencha o formulario</div>
+          <div class="div_inp">
+            Email: <input class="inp_sug" type="text" name="" id="email_inp" />
+          </div>
+          <div class="div_inp">
+            Nome <input class="inp_sug" type="text" name="" id="user_inp" />
+          </div>
+          <div class="div_inp">
+            Url :<input class="inp_sug" type="text" name="" id="url_inp" />
+          </div>
+          <div class="div_inp">
+            Banda :<input class="inp_sug" type="text" name="" id="banda_inp" />
+          </div>
+          <div class="div_inp">
+            Musica :<input
+              class="inp_sug"
+              type="text"
+              name=""
+              id="musica_inp"
+            />
+          </div>
+          <div class="div_combo">
+            <select class="select" name="estilo" id="estilo">
+              <option selected-disable value="">Genero</option>
+              <option value="Heavy_Metal">Heavy Metal</option>
+              <option value="thrash_Metal">Thrash Metal</option>
+              <option value="Black_metal">Black Metal</option>
+              <option value="Nu_metal">Nu Metal</option>
+              <option value="Power_metal">Power Metal</option>
+              <option value="Death_metal">Death Metal</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <button onclick="cadastrar()" class="btn_enviar">Verificar</button>
         </div>
-
+        <div class="container_dir">
+          <div id="container_dir" class="container_video">
+            <div class="div_titulo">Obrigado pela sugestão</div>
+            <h4 id="musica_banda"></h4>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- footer -->
     <div class="footer">
-        <div class="container_footer">
-
-
-            <div class="div_social">
-                <img class="logo_social" src="img/whatsapp.png" alt="">
-                <img class="logo_social" src="img/instagram.png" alt="">
-                <img class="logo_social" src="img/facebook (1).png" alt="">
-            </div><br>
-
-            <div class="div_txt">
-                <h5> Suporte</h5>
-                <h5>INFO</h5>
-                <h5>INFO</h5>
-            </div>
-
-
-
+      <div class="container_footer">
+        <div class="div_social">
+          <img class="logo_social" src="img/whatsapp.png" alt="" />
+          <img class="logo_social" src="img/instagram.png" alt="" />
+          <img class="logo_social" src="img/facebook (1).png" alt="" />
         </div>
+        <br />
 
+        <div class="div_txt">
+          <h5>Suporte</h5>
+          <h5>INFO</h5>
+          <h5>INFO</h5>
+        </div>
+      </div>
     </div>
-
-
-
-
-
-</body>
-
+  </body>
 </html>
 <script>
-    function logo_over() {
-        logo.src = "img/electric-guitar.png"
+  function logo_over() {
+    logo.src = "img/electric-guitar.png";
+  }
+
+  function logo_out() {
+    logo.src = "img/electric-guitar-black.png";
+  }
+
+  function banner_over() {
+    show.style.backgroundImage =
+      "url(https://m1newstv.com/storage/2019/01/m1newstv_rock_facenews.gif)";
+    txt_banner_direita.innerHTML =
+      " Viva os melhores momentos de adorar a musica<br>";
+    btn_none.style.Display = "flex";
+  }
+
+  function banner_out() {
+    show.style.backgroundImage = "url(img/shows-coronavirus.jpg)";
+    txt_banner_direita.innerHTML = "Toque como seus herois";
+  }
+
+  function verificar() {
+    document.getElementById("container_dir").style.display = "flex";
+    musica_banda.innerHTML = `${musica_inp.value} da banda ${banda_inp.value}`;
+  }
+  function cadastrar() {
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var emailVar = email_inp.value;
+    var nomeVar = user_inp.value;
+    var urlVar = url_inp.value;
+    var bandaVar = banda_inp.value;
+    var musicaVar = musica_inp.value;
+    var estiloVar = estilo.value;
+    var id=sessionStorage.ID_USUARIO
+
+
+    if (
+      emailVar == "" ||
+      nomeVar == "" ||
+      urlVar == "" ||
+      musicaVar == "" ||
+      estiloVar == "" ||
+      bandaVar == ""
+    ) {
+      document.getElementById("alert_erro").style.display = "block";
+      txt_alert_erro.innerHTML = `Dados não preenchidos`;
+    } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+      document.getElementById("alert_erro").style.display = "block";
+      txt_alert_erro.innerHTML = `Senha ou email invalido`;
+    }
+    else {
+      document.getElementById("alert_erro").style.display = "none";
+    verificar()
+      if (
+        emailVar == "" ||
+      nomeVar == "" ||
+      urlVar == "" ||
+      musicaVar == "" ||
+      estiloVar == "" 
+     ) {
+        cardErro.style.display = "block";
+        txt_alert_erro.innerHTML =
+          "(Mensagem de erro para todos os campos em branco)";
+
+        finalizarAguardar();
+        return false;
+      } else {
+        setInterval(sumirMensagem, 5000);
+      }
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/sugestao", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          urlServer: urlVar,
+          bandaServer: bandaVar,
+          musicaServer: musicaVar,
+          estiloServer: estiloVar,
+          emailServer: emailVar,
+          idServer:id,
+
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+      
+
+          if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            txt_alert_erro.innerHTML =
+              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+            setTimeout(() => {
+              window.location = "musicas.html";
+            }, "2000");
+
+            limparFormulario();
+            finalizarAguardar();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          finalizarAguardar();
+        });
+
+      return false;
     }
 
-    function logo_out() {
-        logo.src = "img/electric-guitar-black.png"
+    function sumirMensagem() {
+      cardErro.style.display = "none";
     }
-
-    function banner_over() {
-        show.style.backgroundImage =
-            "url(https://m1newstv.com/storage/2019/01/m1newstv_rock_facenews.gif)";
-        txt_banner_direita.innerHTML =
-            " Viva os melhores momentos de adorar a musica<br>"
-        btn_none.style.Display = "flex"
-
-    }
-
-    function banner_out() {
-        show.style.backgroundImage =
-            "url(img/shows-coronavirus.jpg)";
-        txt_banner_direita.innerHTML = "Toque como seus herois"
-
-
-    }
-
-    function verificar() {
-        var link=url.value;
-        document.getElementById("container_dir").style.display = "flex"
-        musica_banda.innerHTML=`${musica_inp.value} da banda ${banda_inp.value}`
-        
-
-    }
+  }
 </script>
