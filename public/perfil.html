@@ -32,9 +32,10 @@
                 <img class="lupa_search" src="img/lupa-arredondada.png" alt="">
             </div>
             <div class="dropdown">
-               <div class="logo_perfil"><img  height="40px" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt=""></div> 
+                <div class="logo_perfil"><img height="40px" src="https://pic.onlinewebfonts.com/svg/img_550783.png"
+                        alt=""></div>
                 <div class="dropdown_menu">
-                    <div class="drop_div">Perfil</div class="drop_div">
+                    <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
                     <div class="drop_div"><a href="index.html">Sair</a> </div class="drop_div">
                 </div>
             </div>
@@ -43,33 +44,33 @@
 
 
     <!-- banner -->
-  <div class="banner">
-      <div class="div_lateral">
-          <div class="foto_perfil">
-              <img class="img_perfil" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt="">
-          </div>
-          <div class="msg_ola">      
-            Olá
-            <br>
-            <br>
-            <br>
+    <div class="banner">
+        <div class="div_lateral">
+            <div class="foto_perfil">
+                <img class="img_perfil" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt="">
+            </div>
+            <div class="msg_ola">
+                <div id="msg">Olá</div>
+                <br>
+                <br>
+                <br>
 
-            Membro desde:<br>
-            Instrumentos tocados:<br>
-            Musica Favorita:<br>
-            <br>
-            <br>
-            <br>
-            Professor<br>
+               <div id="msg_data"> Membro desde:<br></div>
+                Instrumentos tocados:<br>
+                Musica Favorita:<br>
+                <br>
+                <br>
+                <br>
+                Professor<br>
+            </div>
         </div>
-      </div>
-      <div class="div_direita">
-          <div class="txt_direita">
-              Suas Ultimas Recomendações!
-          </div>
+        <div class="div_direita">
+            <div class="txt_direita">
+                Suas Ultimas Recomendações!
+            </div>
 
-      </div>
-  </div>
+        </div>
+    </div>
     <!-- footer -->
     <div class="footer">
         <div class="container_footer">
@@ -125,4 +126,12 @@
 
 
     }
+    var email = sessionStorage.EMAIL_USUARIO
+    var nome = sessionStorage.NOME_USUARIO
+    var nome = sessionStorage.NOME_USUARIO
+    var data = sessionStorage.DATA
+    msg.innerHTML = `Olá ${nome}`
+    msg_data.innerHTML = `Membro desde <br>${data}`
+
+
 </script>

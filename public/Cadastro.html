@@ -31,6 +31,9 @@
                     <span>Senha :</span><input class="search" type="password" name="" id="senha_inp">
                 </div>
                 <div class="div_inp_cadastro">
+                    <span>Banda :</span><input class="search" type="password" name="" id="favorita">
+                </div>
+                <div class="div_inp_cadastro">
                     <span>Confirmar <br>senha :</span><input class="search" type="password" name=""
                         id="confirmar_senha_inp">
                 </div>
@@ -60,9 +63,10 @@
         var emailVar = email_inp.value;
         var nomeVar = user_inp.value;
         var senhaVar = senha_inp.value;
+        var favoritaVar = favorita.value;
         var confirmacaoSenhaVar = confirmar_senha_inp.value;
      
-        if (emailVar == "" || nomeVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (emailVar == "" || nomeVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || favorita=="") {
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Dados não preenchidos`
 
@@ -102,6 +106,7 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
+                favoritaServer: favoritaVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {

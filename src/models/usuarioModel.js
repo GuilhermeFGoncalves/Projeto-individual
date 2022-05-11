@@ -19,25 +19,25 @@ function entrar(email, senha) {
 }
 
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
-function cadastrar(nome, email, senha) {
+function cadastrar(nome, email, senha,favorita) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO usuario (usuario, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+        INSERT INTO usuario (usuario, email, senha,bandaFavorita) VALUES ('${nome}', '${email}', '${senha}','${favorita}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
-function sugestao(usuario, email, url,banda,musica,estilo,id) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function sugestao():", usuario, email, url,banda,musica,estilo);
+function sugestao( url,banda,musica,estilo,id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function sugestao():", url,banda,musica,estilo);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO aviso (usuario, email, url,banda,musica,estilo,fkusuario) VALUES 
-        ('${usuario}', '${email}', '${url}','${banda}','${musica}','${estilo}','${id}');
+        INSERT INTO sugestao (url,banda,musica,estilo,fkusuario) VALUES 
+        ('${url}','${banda}','${musica}','${estilo}','${id}');
         
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);

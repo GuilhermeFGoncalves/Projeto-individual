@@ -38,11 +38,13 @@
         <div class="dropdown">
           <div class="logo_perfil"><img  height="40px" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt=""></div> 
            <div class="dropdown_menu">
-               <div class="drop_div">Perfil</div class="drop_div">
+     <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
+
                <div class="drop_div"><a href="index.html">Sair</a> </div class="drop_div">
            </div>
        </div>
       </div>
+      
     </nav>
 
     <!-- banner -->
@@ -55,12 +57,7 @@
       <div class="container_sug">
         <div class="container_esq">
           <div class="div_titulo">Preencha o formulario</div>
-          <div class="div_inp">
-            Email: <input class="inp_sug" type="text" name="" id="email_inp" />
-          </div>
-          <div class="div_inp">
-            Nome <input class="inp_sug" type="text" name="" id="user_inp" />
-          </div>
+      
           <div class="div_inp">
             Url :<input class="inp_sug" type="text" name="" id="url_inp" />
           </div>
@@ -145,8 +142,7 @@
   function cadastrar() {
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    var emailVar = email_inp.value;
-    var nomeVar = user_inp.value;
+  
     var urlVar = url_inp.value;
     var bandaVar = banda_inp.value;
     var musicaVar = musica_inp.value;
@@ -154,39 +150,16 @@
     var id=sessionStorage.ID_USUARIO
 
 
-    if (
-      emailVar == "" ||
-      nomeVar == "" ||
-      urlVar == "" ||
-      musicaVar == "" ||
-      estiloVar == "" ||
-      bandaVar == ""
-    ) {
-      document.getElementById("alert_erro").style.display = "block";
-      txt_alert_erro.innerHTML = `Dados não preenchidos`;
-    } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
-      document.getElementById("alert_erro").style.display = "block";
-      txt_alert_erro.innerHTML = `Senha ou email invalido`;
-    }
-    else {
-      document.getElementById("alert_erro").style.display = "none";
-    verificar()
       if (
-        emailVar == "" ||
-      nomeVar == "" ||
       urlVar == "" ||
       musicaVar == "" ||
       estiloVar == "" 
      ) {
-        cardErro.style.display = "block";
         txt_alert_erro.innerHTML =
           "(Mensagem de erro para todos os campos em branco)";
 
-        finalizarAguardar();
         return false;
-      } else {
-        setInterval(sumirMensagem, 5000);
-      }
+      } 
 
       // Enviando o valor da nova input
       fetch("/usuarios/sugestao", {
@@ -197,12 +170,10 @@
         body: JSON.stringify({
           // crie um atributo que recebe o valor recuperado aqui
           // Agora vá para o arquivo routes/usuario.js
-          nomeServer: nomeVar,
           urlServer: urlVar,
           bandaServer: bandaVar,
           musicaServer: musicaVar,
           estiloServer: estiloVar,
-          emailServer: emailVar,
           idServer:id,
 
         }),
@@ -212,31 +183,19 @@
       
 
           if (resposta.ok) {
-            cardErro.style.display = "block";
-
-            txt_alert_erro.innerHTML =
-              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
             setTimeout(() => {
               window.location = "musicas.html";
             }, "2000");
-
-            limparFormulario();
-            finalizarAguardar();
           } else {
             throw "Houve um erro ao tentar realizar o cadastro!";
           }
         })
         .catch(function (resposta) {
           console.log(`#ERRO: ${resposta}`);
-          finalizarAguardar();
         });
 
       return false;
     }
 
-    function sumirMensagem() {
-      cardErro.style.display = "none";
-    }
-  }
+  
 </script>
