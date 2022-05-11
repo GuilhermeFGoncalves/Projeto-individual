@@ -136,3 +136,77 @@ text-decoration: none;
 
 
 }
+.dropdown{
+display: flex;
+align-items: center;
+position: relative;
+
+
+}
+
+.dropdown_menu{
+position: absolute;
+background-color: white;
+width: 100px;
+opacity: 0;
+transition:300ms;
+border-top: 0ch;
+pointer-events: none;
+transform: translateY(-90px);
+cursor: pointer;
+height: 80px;
+margin: 100px;
+margin-left: -35px;
+border-radius: 10px;
+border: 1px solid rgba(128, 128, 128, 0.363);
+display: flex;
+flex-direction: column;
+padding-top: 10px;
+padding-bottom  : 10px;
+
+}
+
+.dropdown > .logo_perfil:hover + .dropdown_menu{
+opacity: 1;
+pointer-events: all;
+transform: translateY(70px);
+
+}
+
+
+.dropdown_menu:hover{
+opacity: 1;
+pointer-events: all;
+transform: translateY(62px);
+
+
+}
+
+
+.drop_div{
+font-weight: 300;
+text-align: center;
+height: 40%;
+width: 100%;
+margin: 0;
+padding: 0%;
+transition: 200ms
+
+}
+.logo_perfil{
+height: 100%;
+display: flex;
+align-items: center;
+
+}
+.drop_div:hover{
+background-color: rgba(192, 173, 173, 0.568);
+font-weight: 400;
+
+}
+.drop_div a {
+color: black;
+
+
+
+}

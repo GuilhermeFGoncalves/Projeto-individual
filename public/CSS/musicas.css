@@ -166,8 +166,8 @@ font-size: 9pt;
 }
 .chart{
 width:300px;
-height:300px;
-
+height: 275px;
+margin-left: 300px;
 }.sobre_musica{
 float: left;
 text-indent: 100px;
