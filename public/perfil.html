@@ -55,7 +55,7 @@
                 <br>
                 <br>
 
-               <div id="msg_data"> Membro desde:<br></div>
+                <div id="msg_data"> Membro desde:<br></div>
                 Instrumentos tocados:<br>
                 Musica Favorita:<br>
                 <br>
@@ -68,6 +68,10 @@
             <div class="txt_direita">
                 Suas Ultimas Recomendações!
             </div>
+            <div id="txt_sug" class="scroller_sug">
+            
+          
+            </div>
 
         </div>
     </div>
@@ -77,7 +81,7 @@
 
 
             <div class="div_social">
-                <img class="logo_social" src="img/whatsapp.png" alt="">
+                <img id="teste" class="logo_social" src="img/whatsapp.png" alt="">
                 <img class="logo_social" src="img/instagram.png" alt="">
                 <img class="logo_social" src="img/facebook (1).png" alt="">
             </div><br>
@@ -102,8 +106,22 @@
 
 </html>
 <script>
+  
+    var email = sessionStorage.EMAIL_USUARIO
+    var nome = sessionStorage.NOME_USUARIO
+    var nome = sessionStorage.NOME_USUARIO
+    var data = sessionStorage.DATA
+    var id = sessionStorage.ID_USUARIO
+    var banda = sessionStorage.BANDA
+    var musica = sessionStorage.MUSICA
+    var estilo = sessionStorage.ESTILO
+
+    msg.innerHTML = `Olá ${nome}`
+    msg_data.innerHTML = `Membro desde <br>${data}`
+
     function logo_over() {
         logo.src = "img/electric-guitar.png"
+  
     }
 
     function logo_out() {
@@ -124,14 +142,7 @@
             "url(img/shows-coronavirus.jpg)";
         txt_banner_direita.innerHTML = "Toque como seus herois"
 
-
     }
-    var email = sessionStorage.EMAIL_USUARIO
-    var nome = sessionStorage.NOME_USUARIO
-    var nome = sessionStorage.NOME_USUARIO
-    var data = sessionStorage.DATA
-    msg.innerHTML = `Olá ${nome}`
-    msg_data.innerHTML = `Membro desde <br>${data}`
-
+  
 
 </script>

@@ -47,6 +47,7 @@
 </html>
 <script>
     function entrar() {
+        resgatar()
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
@@ -84,7 +85,11 @@
                     sessionStorage.NOME_USUARIO = json.usuario;
                     sessionStorage.ID_USUARIO = json.id;
                     sessionStorage.DATA = json.DTinicio;
-
+                    sessionStorage.URL = json.url;
+                    sessionStorage.BANDA = json.banda;
+                    sessionStorage.MUSICA = json.musica;
+                    sessionStorage.ESTILO = json.estilo;
+                    
                     setTimeout(function () {
                         window.location = "index-logado.html";
                     }, 1000); // apenas para exibir o loading
@@ -110,4 +115,56 @@
     function sumirMensagem() {
         alert_erro.style.display = "none"
     }
+ function  resgatar(){
+ {
+        var id = sessionStorage.ID_USUARIO;
+   
+        console.log(`${id} `);
+
+        fetch("/usuarios/resgatar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idServer: id
+         
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    alert(JSON.stringify(json));
+                
+                    sessionStorage.URL = json.url;
+                    sessionStorage.BANDA = json.banda;
+                    sessionStorage.MUSICA = json.musica;
+                    sessionStorage.ESTILO = json.estilo;
+                    
+                    setTimeout(function () {
+                        window.location = "index-logado.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+     
+    }
+}
 </script>

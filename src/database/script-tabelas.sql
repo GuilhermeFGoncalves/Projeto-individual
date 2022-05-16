@@ -7,17 +7,20 @@ CREATE DATABASE Lost_music;
 
 USE Lost_music;
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	usuario VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
-);
+	CREATE TABLE usuario (
+		id INT PRIMARY KEY AUTO_INCREMENT,
+		usuario VARCHAR(50),
+		email VARCHAR(50),
+		senha VARCHAR(50),
+		dtCadastro datetime
+	);
 
 	CREATE TABLE sugestao (
 		id INT PRIMARY KEY AUTO_INCREMENT,
-		titulo VARCHAR(100),
-		descricao VARCHAR(150),
+		url VARCHAR(100),
+		banda VARCHAR(150),
+		musica VARCHAR(150),
+		estilo VARCHAR(150),
 		fk_usuario INT,
 		FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 	); 

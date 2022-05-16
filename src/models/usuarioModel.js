@@ -12,7 +12,16 @@ function listar() {
 function entrar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
-        SELECT * FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT * FROM usuario  WHERE email = '${email}' AND senha = '${senha}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function resgatar(id) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", id,)
+    var instrucao = `
+    select * from sugestao join usuario on usuario.id=fk_usuario where usuario.id = '${id}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -36,7 +45,7 @@ function sugestao( url,banda,musica,estilo,id) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO sugestao (url,banda,musica,estilo,fkusuario) VALUES 
+        INSERT INTO sugestao (url,banda,musica,estilo,fk_usuario) VALUES 
         ('${url}','${banda}','${musica}','${estilo}','${id}');
         
     `;
@@ -48,5 +57,6 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    sugestao
+    sugestao,
+    resgatar
 };
