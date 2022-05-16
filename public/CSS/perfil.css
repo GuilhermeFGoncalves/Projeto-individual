@@ -73,9 +73,10 @@ transition: 400ms;
 cursor: pointer;
 font-size: 18pt;
 font-weight: 300;
+border-bottom: 1px solid rgb(172, 166, 166);
 }
 .div_ultima_sug:hover{
-background-color: gainsboro;
+background-color: rgb(236, 231, 231);
 height: 200px;
 border: 1px solid rgba(0, 0, 0, 0.315);
 

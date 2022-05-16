@@ -76,7 +76,9 @@ width: 100%;
 height: 50%;
 margin: 0% auto;
 padding-left: 50px;
-
+display: flex;
+flex-direction: column;
+overflow-y: auto;
 }
 .div_direita_musica{
 height: 100%;
