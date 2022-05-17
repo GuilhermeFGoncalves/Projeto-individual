@@ -12,6 +12,7 @@ USE Lost_music;
 		usuario VARCHAR(50),
 		email VARCHAR(50),
 		senha VARCHAR(50),
+		bandaFavorita VARCHAR(45),
 		dtCadastro datetime
 	);
 

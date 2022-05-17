@@ -69,8 +69,8 @@
                 Suas Ultimas Recomendações!
             </div>
             <div id="txt_sug" class="scroller_sug">
-            <div class="div_ultima_sug"></div>
-          
+
+
             </div>
 
         </div>
@@ -106,7 +106,7 @@
 
 </html>
 <script>
-  
+
     var email = sessionStorage.EMAIL_USUARIO
     var nome = sessionStorage.NOME_USUARIO
     var nome = sessionStorage.NOME_USUARIO
@@ -121,7 +121,7 @@
 
     function logo_over() {
         logo.src = "img/electric-guitar.png"
-  
+
     }
 
     function logo_out() {
@@ -143,58 +143,73 @@
         txt_banner_direita.innerHTML = "Toque como seus herois"
 
     }
-    function  resgatar(){
- {
-        var id = sessionStorage.ID_USUARIO;
-   
-        console.log(`${id} `);
+    function resgatar() {
+        {
+            var id = sessionStorage.ID_USUARIO;
 
-        fetch("/usuarios/resgatar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                idServer: id
-         
+            console.log(`${id} `);
+
+            fetch("/usuarios/resgatar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    idServer: id
+
+                })
+            }).then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!")
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+
+
+                        for (var i = 0; i <= 3; i++) {
+                            sessionStorage.URL = json[i].url;
+                            sessionStorage.BANDA = json[i].banda;
+                            sessionStorage.MUSICA = json[i].musica;
+                            sessionStorage.ESTILO = json[i].estilo;
+
+
+
+                            txt_sug.innerHTML += `
+                        <div class="div_ultima_sug">
+                           <h4> Banda:</h4>  ${sessionStorage.BANDA}
+                           <h4>Musica :</h4>${sessionStorage.MUSICA}
+                           <h4>  Estilo :</h4> ${sessionStorage.ESTILO}
+                           <h4>URL da musica :</h4>${sessionStorage.URL}<br>
+                           <h4>Obrigado pela sugestão!</h4>
+                            </div>
+
+                            `
+                        }
+
+
+
+
+
+                    });
+
+                } else {
+
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                    });
+                }
+
+            }).catch(function (erro) {
+                console.log(erro);
             })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
 
-            if (resposta.ok) {
-                console.log(resposta);
 
-                resposta.json().then(json => {
-                    console.log(json);
-                    alert(JSON.stringify(json));
-                
-                    sessionStorage.URL =json.url;
-                    sessionStorage.BANDA = json.banda;
-                    sessionStorage.MUSICA = json.musica;
-                    sessionStorage.ESTILO = json.estilo;
-                    
-                    setTimeout(function () {
-                        window.location = "index-logado.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-     
+        }
     }
-}
-  
+
 
 </script>

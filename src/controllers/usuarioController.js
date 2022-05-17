@@ -73,6 +73,7 @@ function resgatar(req, res) {
       .then(function (resultado) {
         console.log(`\nResultados encontrados: ${resultado.length}`);
         console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+        res.json(resultado);
       })
       .catch(function (erro) {
         console.log(erro);
