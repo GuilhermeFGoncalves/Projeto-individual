@@ -1,19 +1,18 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/* para workbench - local - desenvolvimento */
 CREATE DATABASE Lost_music;
 
 USE Lost_music;
+select *from usuario;
+select *from sugestao;
 
 	CREATE TABLE usuario (
 		id INT PRIMARY KEY AUTO_INCREMENT,
 		usuario VARCHAR(50),
 		email VARCHAR(50),
 		senha VARCHAR(50),
-		bandaFavorita VARCHAR(45),
-		dtCadastro datetime
+        bandaFavorita varchar(45),
+        instrumento varchar(45),
+        nivel varchar(45),
+		dtCadastro datetime not null default current_timestamp
 	);
 
 	CREATE TABLE sugestao (
@@ -25,4 +24,8 @@ USE Lost_music;
 		fk_usuario INT,
 		FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 	); 
+    drop database lost_music;
 
+
+select * from usuario join sugestao on usuario.id=fk_usuario where usuario.id=1;
+  SELECT * FROM usuario JOIN sugestao on usuario.id=fk_usuario WHERE usuario.id=1;
