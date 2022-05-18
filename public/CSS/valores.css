@@ -1,0 +1,33 @@
+.banner{
+height: 220vh;
+width: 100%;
+background-color:aliceblue ;
+
+}
+.container_explicacao{
+height: 45%;
+width: 100%;
+background-color:#EC8000;
+display: flex;
+justify-content:flex-start;
+flex-direction: column;
+text-indent: 50px;
+border-radius: 0 0 1000PX 0;
+
+}
+.container_explicacao h1{
+font-weight: 300;
+font-size: 35pt;
+margin-left: 10px;
+
+
+}
+.container_explicacao span{
+
+font-weight: 200;
+font-size: 12pt;
+color: white;
+margin-left: 50px;
+
+
+}
