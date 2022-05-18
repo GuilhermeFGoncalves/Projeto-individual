@@ -36,7 +36,7 @@
                         alt=""></div>
                 <div class="dropdown_menu">
                     <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
-                    <div class="drop_div"><a href="index.html">Sair</a> </div class="drop_div">
+                    <div onclick="sair()"  class="drop_div">Sair </div class="drop_div">
                 </div>
             </div>
         </div>
@@ -51,13 +51,6 @@
             </div>
             <div class="msg_ola">
                 <div id="msg">Olá</div>
-                <br>
-                <br>
-                <br>
-
-                <div id="msg_data"> Membro desde:<br></div>
-                Instrumentos tocados:<br>
-                Musica Favorita:<br>
                 <br>
                 <br>
                 <br>
@@ -106,9 +99,9 @@
 
 </html>
 <script>
-
     var email = sessionStorage.EMAIL_USUARIO
-    var nome = sessionStorage.NOME_USUARIO
+    var instrumento = sessionStorage.INSTRUMENTO
+    var nivel = sessionStorage.NIVEL
     var nome = sessionStorage.NOME_USUARIO
     var data = sessionStorage.DATA
     var id = sessionStorage.ID_USUARIO
@@ -116,8 +109,14 @@
     var musica = sessionStorage.MUSICA
     var estilo = sessionStorage.ESTILO
 
-    msg.innerHTML = `Olá ${nome}`
-    msg_data.innerHTML = `Membro desde <br>${data}`
+    msg.innerHTML = `Olá ${nome}<br><br>
+   Membro desde ${data}<br><br>
+   Banda Favorita ${sessionStorage.BANDAFAVORITA}<br><br>
+     Instrumentos tocados: ${instrumento}<br><br>
+                            Nivel: ${nivel}<br><br>`
+
+
+
 
     function logo_over() {
         logo.src = "img/electric-guitar.png"
@@ -143,6 +142,7 @@
         txt_banner_direita.innerHTML = "Toque como seus herois"
 
     }
+
     function resgatar() {
         {
             var id = sessionStorage.ID_USUARIO;
@@ -166,6 +166,7 @@
 
                     resposta.json().then(json => {
                         console.log(json);
+                        checar()
 
 
                         for (var i = 0; i <= 3; i++) {
@@ -186,6 +187,8 @@
                             </div>
 
                             `
+
+
                         }
 
 
@@ -210,6 +213,19 @@
 
         }
     }
+    
+    function sair() {
+        sessionStorage.clear()
+        checar()
+
+    }
+
+    function checar() {
+        if (sessionStorage.ID_USUARIO == null) {
+            window.location = "index.html"
+
+        }
 
 
+    }
 </script>

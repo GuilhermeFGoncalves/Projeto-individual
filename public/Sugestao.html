@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="CSS/css_geral.css" />
   </head>
 
-  <body>
+  <body onload="checar()" >
     <!-- Header -->
 
     <nav id="header" class="header">
@@ -40,7 +40,7 @@
            <div class="dropdown_menu">
      <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
 
-               <div class="drop_div"><a href="index.html">Sair</a> </div class="drop_div">
+               <div  onclick="sair()" class="drop_div">Sair </div class="drop_div">
            </div>
        </div>
       </div>
@@ -196,6 +196,20 @@
 
       return false;
     }
+    function sair() {
+        sessionStorage.clear()
+        checar()
+
+    }
+
+    function checar() {
+        if (sessionStorage.ID_USUARIO == null) {
+            window.location = "index.html"
+
+        }
+
+
+   } 
 
   
 </script>

@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="checar()" >
     <!-- Header -->
 
     <nav id="header" class="header">
@@ -33,7 +33,7 @@
               <div class="logo_perfil"><img  height="40px" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt=""></div> 
                <div class="dropdown_menu">
                 <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
-                   <div class="drop_div"><a href="index.html">Sair</a> </div class="drop_div">
+                   <div  onclick="sair()" class="drop_div">Sair </div class="drop_div">
                </div>
            </div>
           </div>
@@ -668,4 +668,19 @@ r: {
 
 
     }
+    
+    function sair() {
+        sessionStorage.clear()
+        checar()
+
+    }
+
+    function checar() {
+        if (sessionStorage.ID_USUARIO == null) {
+            window.location = "index.html"
+
+        }
+
+
+   } 
 </script>
