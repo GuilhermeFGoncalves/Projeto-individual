@@ -1,5 +1,5 @@
 .banner {
-  height: 320vh;
+  height: 350vh;
   width: 100%;
   background-color: aliceblue;
 }
@@ -65,6 +65,7 @@ box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
   text-align: center;
   padding: 10px;
   color: #ec8000;
+  
 }
 .txt_sobre_mim span{
 font-weight: 300;
@@ -79,5 +80,134 @@ align-self: center;
 position: relative;
 margin: 40px;
 border: 22px groove #ec8000;
+
+}
+.div_idolos{
+background-color: gainsboro;
+  height: 40%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+}
+.container_idolos{
+height: 80%;
+width: 90%;
+background-color: white;
+box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+.icon_idolo{
+  height: 200px;
+ width: 200px;
+ margin-top: 10px;
+box-shadow: 0 0 10px black;
+transition: 300ms;
+border-radius: 150px;
+
+}
+.linha_container{
+height: 40%;
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+
+}
+
+.icon_idolo:hover{
+transform: scale(1.5,1.5);
+cursor: pointer;
+box-shadow: 0 1px 1000em black;
+}
+.container_idolos span{
+font-weight: 300;
+color: #ec8000;
+text-align: center  ;
+font-size: 30pt;
+}
+.container_mustaine{
+  height: 80%;
+  width: 90%;
+  background-color: white;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
+  display: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.desc_idolo{
+height: 100%;
+width: 30%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border: 1px solid gainsboro;
+justify-content: space-around;
+}
+.desc_idolo h2{
+
+  font-weight: 300; 
+font-size: 15pt;
+}
+button{
+border: none;
+background-color: #ec8000;
+height: 50px;
+width: 150px;
+font-size: 14pt;
+font-weight: 300;
+color: white;
+transition: 400ms;
+}
+
+button:hover{
+background-color: #ff9009;
+cursor: pointer;
+
+
+}
+.sobre_idolo{
+width: 70%;
+height: 100%;
+padding-left: 100px;
+overflow-y: auto;
+
+
+
+}
+.signature{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+
+
+}
+.signature h1{
+  font: 22pt;
+font-weight: 300; 
+}
+.sobre_idolo span{
+font-size: 16pt;
+font-weight: 300;
+
+
+}
+.sobre_idolo h1{
+font-weight: 300;
+color: #ec8000;
+text-align: center;
+
+
+}
+.escutar{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 
 }
