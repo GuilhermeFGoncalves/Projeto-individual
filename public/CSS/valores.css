@@ -1,33 +1,83 @@
-.banner{
-height: 220vh;
-width: 100%;
-background-color:aliceblue ;
+.banner {
+  height: 320vh;
+  width: 100%;
+  background-color: aliceblue;
+}
+.container_explicacao {
+  height: 700px;
+  width: 91%;
+  background-color: #ec8000;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  text-indent: 50px;
+  border-radius: 0 0 1500px 0;
+  transition: 500ms;
+  padding-left: 110px;
+}
+.container_explicacao:hover {
+  border-radius: 0 50px 400px 0;
+  cursor: pointer;
+  height: 800px;
+}
+
+.container_explicacao h1 {
+  font-weight: 300;
+  font-size: 35pt;
+  margin-left: 10px;
+  color: white;
+}
+.container_explicacao span {
+  font-weight: 100;
+  font-size: 13pt;
+  color: rgb(0, 0, 0);
+}
+.div_explicacao {
+  height: 100%;
+  width: 50%;
+}
+.sobre_mim {
+  height: 500px;
+  width: 80%;
+  margin: 0%auto;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+  border: 1px solid gainsboro;
+  transition: 400ms;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 
 }
-.container_explicacao{
-height: 45%;
-width: 100%;
-background-color:#EC8000;
-display: flex;
-justify-content:flex-start;
-flex-direction: column;
-text-indent: 50px;
-border-radius: 0 0 1000PX 0;
+.txt_sobre_mim {
+  height: 100%;
+  width: 70%;
+}
+.sobre_mim:hover{
+width: 90%;
+height: 550px;
+cursor: pointer;
+box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
 
 }
-.container_explicacao h1{
+.txt_sobre_mim h1 {
+  font-weight: 300;
+  text-align: center;
+  padding: 10px;
+  color: #ec8000;
+}
+.txt_sobre_mim span{
 font-weight: 300;
-font-size: 35pt;
-margin-left: 10px;
-
+position: absolute;
+margin-left: 30px;
+text-indent: 20px;
 
 }
-.container_explicacao span{
+.foto_sobre{
 
-font-weight: 200;
-font-size: 12pt;
-color: white;
-margin-left: 50px;
-
+align-self: center;
+position: relative;
+margin: 40px;
+border: 22px groove #ec8000;
 
 }
