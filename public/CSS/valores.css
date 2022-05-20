@@ -1,7 +1,9 @@
 .banner {
   height: 350vh;
   width: 100%;
-  background-color: aliceblue;
+  background:radial-gradient(ellipse at center, 
+  rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #5f5f5e7e 100%);
+  overflow: hidden;
 }
 .container_explicacao {
   height: 700px;
@@ -57,7 +59,7 @@
 width: 90%;
 height: 550px;
 cursor: pointer;
-box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
+box-shadow: 0 0 5em rgba(0, 0, 0, 0.479);
 
 }
 .txt_sobre_mim h1 {
@@ -83,16 +85,38 @@ border: 22px groove #ec8000;
 
 }
 .div_idolos{
-background-color: gainsboro;
-  height: 40%;
+  background: #015871;
+  height: 45%;
 width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 margin-top: 100px;
+border-radius: 0 10000px 0 0;
+animation-name: rolagem;
+animation-duration: 10s;
+animation-direction: alternate-reverse;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+@keyframes rolagem{
+  /* 0%   {background-color: rgb(10, 10, 46);}
+  10%  {background-color: rgb(5, 5, 24);}
+  20%  {background-color: rgb(4, 4, 26);}
+  30% {background-color: rgb(10, 10, 46);}
+  40% {background-color: rgb(23, 7, 61);}
+  50% {background-color: rgb(31, 6, 70);}
+  60% {background-color: rgb(59, 10, 104);}
+  70% {background-color: rgb(56, 14, 110);}
+  80% {background-color: rgb(52, 14, 77);}
+  90% {background-color: rgb(37, 15, 66);}
+  100% {background-color: rgb(18, 10, 46);} */
+  0%{background-color: rgb(10, 10, 46);}
+  50%{background-color: rgb(94, 177, 26);}
+  100%{background-color: rgb(221, 97, 14);}
 }
 .container_idolos{
-height: 80%;
+height: 50%;
 width: 90%;
 background-color: white;
 box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
@@ -119,8 +143,8 @@ justify-content: space-evenly;
 
 .icon_idolo:hover{
 transform: scale(1.5,1.5);
+filter: grayscale(100%);
 cursor: pointer;
-box-shadow: 0 1px 1000em black;
 }
 .container_idolos span{
 font-weight: 300;
@@ -129,7 +153,7 @@ text-align: center  ;
 font-size: 30pt;
 }
 .container_mustaine{
-  height: 80%;
+  height: 50%;
   width: 90%;
   background-color: white;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.479);
@@ -144,7 +168,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-border: 1px solid gainsboro;
+border-right: 5px solid gainsboro;
 justify-content: space-around;
 }
 .desc_idolo h2{
@@ -174,6 +198,8 @@ width: 70%;
 height: 100%;
 padding-left: 100px;
 overflow-y: auto;
+background:radial-gradient(ellipse at center, 
+  rgb(255, 255, 255) 0%, rgba(233, 228, 228, 0.329) 35%, #5f5f5e2a 100%);
 
 
 
