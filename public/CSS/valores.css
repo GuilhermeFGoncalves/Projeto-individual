@@ -86,18 +86,17 @@ border: 22px groove #ec8000;
 }
 .div_idolos{
   background: #015871;
-  height: 45%;
+  height: 47%;
 width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
 margin-top: 100px;
-border-radius: 0 10000px 0 0;
+border-radius: 1200px 0 0 0;
 animation-name: rolagem;
-animation-duration: 10s;
-animation-direction: alternate-reverse;
+animation-duration: 3s;
+animation-direction: alternate;
 animation-iteration-count: infinite;
-animation-timing-function: linear;
 }
 @keyframes rolagem{
   /* 0%   {background-color: rgb(10, 10, 46);}
@@ -111,9 +110,8 @@ animation-timing-function: linear;
   80% {background-color: rgb(52, 14, 77);}
   90% {background-color: rgb(37, 15, 66);}
   100% {background-color: rgb(18, 10, 46);} */
-  0%{background-color: rgb(10, 10, 46);}
-  50%{background-color: rgb(94, 177, 26);}
-  100%{background-color: rgb(221, 97, 14);}
+  0%{border-radius: 800px 5px 0 0;}
+  100%{border-radius: 100% 5px 0 0;}
 }
 .container_idolos{
 height: 50%;
