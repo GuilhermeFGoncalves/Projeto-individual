@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="CSS/css_sobrenos.css">
     <link rel="stylesheet" href="CSS/css_geral.css">
+    <link rel="stylesheet" href="/CSS/index_logado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
 
@@ -45,30 +47,29 @@
 
     <!-- banner -->
     <div class="div_banner">
-        <div class="div_lateral">
-            <h3>Trabalhando para fazer ninguem procurar uma musica por mais de 10 minutos.
-                <br>
-                <br>
-                <br>
-                <h2>Não encontrou sua musica!?</H2>
-                <h3>Não tem problema nos mande uma sugestão de que musica fazer agora.</h3>
+        <div class="banner_um">
+            <div class="div_txt">
+                <div class="container_txt">
+                    <h1 >Seja bem vindo!<br>
+                        obrigado pela inscrição
+                    </h1>
+                    <h3>Viva os melhores momentos <br>
+                        de adorar a musica
+                    </h3>
+                    <button onclick="comecar()" class="btn_comecar" >Começar</button>
 
-                <a href="Sugestao.html"><button class="btn_add">Dar Sugestão</button></a>
-            </h3>
-            <h3>Quer nos ajudar e fazer mais pessoas seguirem seus sonhos?<br>
-                entre em contato com a gente para virar um dos professores!
-
-
-            </h3>
-            <a href="Sugestao.html"><button class="btn_contato">Entrar em contato</button></a>
-
+                </div>
+            </div>
+        
         </div>
-        <div style="background-image:url(img/shows-coronavirus.jpg);" id="show" onmouseout="banner_out()"
-            onmouseover="banner_over()" class="div_direita">
-            <span id="txt_banner_direita">Toque como seus herois</span>
-            <button id="btn_none" class="btn_comecar_show">Começar</button>
-        </div>
+        <div class="banner_dois">
+            <div class="txt_vic">
+Veja abaixo os estilos mais pedidos!!
 
+            </div>
+<img width="25%" height="70%" src="https://i.kym-cdn.com/photos/images/original/001/177/653/442.gif" alt="">
+        </div>
+    
 
 
 
@@ -142,5 +143,8 @@
         }
 
 
+    }
+    function comecar(){
+        window.location.href="musicas.html"
     }
 </script>
