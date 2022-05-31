@@ -1,29 +1,31 @@
-body {
-}
+body {}
 
 .div_banner {
-  height: 220vh;
+  height: 300vh;
   box-shadow: inset 0 0 15em rgba(0, 0, 0, 0.116);
   display: flex;
   flex-direction: column;
 }
+
 .banner_um {
   background-image: url(https://wallpapercave.com/wp/wp2722816.jpg);
-  background-size: 1500px;
-  height: 45%;
+  background-size: 220vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   box-shadow: inset 0 0 15em rgba(116, 113, 113, 0.356);
   flex-direction: row;
 }
+
 .div_txt {
   height: 100%;
   width: 60%;
   display: flex;
   align-items: flex-start;
 }
+
 .div_txt h1 {
-  font-size: 50pt;
+  font-size: 12vh;
   font-weight: 300;
   color: white;
 
@@ -32,14 +34,16 @@ body {
 .container_txt {
   height: 50%;
   width: 100%;
-  animation-name: chegada ;
-  animation-duration:  1s;
+  animation-name: chegada;
+  animation-duration: 1s;
   transform: translateX(80px);
 }
+
 @keyframes chegada {
   from {
     transform: translateX(-1010px);
   }
+
   to {
     transform: translateX(80px);
   }
@@ -50,50 +54,185 @@ body {
   font-size: 17pt;
   font-weight: 300;
 }
-.btn_comecar{
-height: 50px;
-width: 150px;
-border-radius: 50px;
-background-color: transparent;
-color: rgb(0, 0, 0);
-border: 1px solid rgb(0, 0, 0);
-font-size: 14pt;
-font-weight: 300;
-transition: 500ms;
+
+.btn_comecar {
+  height: 10vh;
+  width: 32vh;
+  border-radius: 10vh;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 3vh;
+  font-weight: 300;
+  transition: 500ms;
 }
-.btn_comecar:hover{
-width: 200px;
-color: #1B2631 ;
-border:1px solid #1B2631 ;
+
+.btn_comecar:hover {
+  width: 40vh;
+  color: #1B2631;
+  border: 1px solid #1B2631;
 
 }
-.banner_dois{
-height: 25%;
-width: 100%;
-background-color: black;
-display: flex;
-justify-content: end;
-align-items: center;
 
+
+.txt_vic {
+  height: 100%;
+  width: 75%;
+  color: white;
+  font-size: 8vh;
+  font-weight: 100;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 300px;
+  animation-name: subida;
+  animation-duration: 1s;
 }
-.txt_vic{
-height: 100%;
-width: 75%;
-color: white;
-font-size: 40pt;
-font-weight: 100;
-text-align: center;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-padding-top: 300px;
-animation-name: subida ;
-animation-duration:  1s;
-}
+
 @keyframes subida {
-    from {
-        transform: translateY(1010px);
-      }
-      to {
-        transform: translateY(80px);
-      }
+  from {
+    transform: translateY(1010px);
+  }
+
+  to {
+    transform: translateY(80px);
+  }
 }
 
+.banner_tres {
+  width: 216vh;
+  height: 200vh;
+  background: radial-gradient(ellipse at center,
+      rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #5f5f5e7e 100%);
+
+
+}
+
+.container_dash {
+  background-color: #EC8000;
+  height: 65vh;
+  width: 170vh;
+  transform: rotate(1deg) translateY(10vh);
+  margin: 0% auto;
+  box-shadow: 20px 20px 1px #1B2631;
+  display: flex;
+  flex-direction: column;
+}
+
+.txt_estilo {
+  font-size: 7vh;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  width: 100%;
+
+
+
+}
+
+.pointer_hand {
+  height: 80vh;
+  width: 80vh;
+  transform: translateY(-50vh) rotate(6deg);
+}
+
+.container_dois {
+  height: 100vh;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: end;
+  margin-top: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linha_um {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+
+.container_valores {
+  width: 55vh;
+  height: 100%;
+  align-self: flex-end;
+  background-color: white;
+  animation-name: puxar;
+  animation-duration: 1s;
+  transform: translateX(50px);
+  animation-delay: 1s;
+  box-shadow: 0 0 15em rgba(0, 0, 0, 0.623);
+  transition: 700ms;
+  position: relative;
+}
+
+@keyframes puxar {
+  from {
+    transform: translateX(-400px);
+    opacity: 0;
+
+  }
+
+}
+
+.container_explicando_valores {
+  position: absolute;
+  background-color: transparent;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  transition: 300ms;
+  transform: translateY(-60px);
+  opacity: 0;
+}
+
+.container_valores:hover {
+  filter: grayscale(40%);
+  cursor: pointer;
+}
+
+.container_valores:hover>.container_explicando_valores {
+  height: 10%;
+  background-color: gainsboro;
+  transform: translateY(-45vh);
+  opacity: 1;
+
+}
+
+.titulo {
+  font-weight: 100;
+  color: black;
+  font-size: 4vh;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  padding-top: 2vh;
+
+
+}
+
+.container_txt_explicacao {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.titulo_ajuda {
+  height: 40%;
+  width: 100%;
+  font-size: 17vh;
+  font-weight: 100;
+  font-family: 'Staatliches', cursive;
+
+}
+
+.txt_ajuda {
+  font-weight: 300;
+  font-size: 4vh;
+  width: 50%;
+  padding: 4vh;
+}

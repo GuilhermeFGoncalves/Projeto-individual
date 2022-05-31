@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="CSS/css_geral.css">
     <link rel="stylesheet" href="/CSS/index_logado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -23,7 +28,9 @@
                     src="img/electric-guitar-black.png" alt="">
             </a>
             <h5 class="atual">Sobre nos</h5>
-            <a href="valores.html"><h5>Valores</h5></a> 
+            <a href="valores.html">
+                <h5>Valores</h5>
+            </a>
             <a href="musicas.html">
                 <h5>Musicas</h5>
             </a>
@@ -50,26 +57,63 @@
         <div class="banner_um">
             <div class="div_txt">
                 <div class="container_txt">
-                    <h1 >Seja bem vindo!<br>
+                    <h1>Seja bem vindo!<br>
                         obrigado pela inscrição
                     </h1>
                     <h3>Viva os melhores momentos <br>
                         de adorar a musica
                     </h3>
-                    <button onclick="comecar()" class="btn_comecar" >Começar</button>
+                    <button onclick="comecar()" class="btn_comecar">Começar</button>
 
                 </div>
             </div>
-        
+
         </div>
-        <div class="banner_dois">
-            <div class="txt_vic">
-Veja abaixo os estilos mais pedidos!!
+        <div class="banner_tres">
+            <div class="container_dash">
+                <div class="txt_estilo">Estilos mais pedidos</div>
+                <div
+                    style="height: 55vh; width: 70vh; display: flex;align-self: flex-end;margin: 5vh;margin-top: -50px;">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <img class="pointer_hand"
+                    src="https://www.itower.marketing/wp-content/uploads/2016/08/pointinghandvintageimagegraphicsfairy-loopgif11fr150px-right.gif"
+                    alt="">
 
             </div>
-<img width="25%" height="70%" src="https://i.kym-cdn.com/photos/images/original/001/177/653/442.gif" alt="">
+            <div class="container_dois">
+                <div class="linha_um">
+                    <a href="valores.html">
+                        <div class="container_valores">
+                            <img style="height: 100%; width: 100%;"
+                                src="https://i.pinimg.com/474x/0b/05/de/0b05dee06254e2587bc87a01e1c07684.jpg" alt="">
+                            <div class="container_explicando_valores">
+                                <div class="titulo">Checar meus valores!</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="container_txt_explicacao">
+                        <div class="titulo_ajuda">
+                            Nos ajude a manter o projeto vivo!
+                        </div>
+                        <div class="txt_ajuda">
+                            Ta com vontade de aprender mais ainda se divertindo?
+                            <br>
+                            Fale com a gente se torne um dos professores e faça o sonho das pessoas
+                            <br>
+                            Ficar cada vez mais no alcance delas<br>
+
+
+                        </div>
+                        <button class="btn_comecar">Virar professor</button>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-    
+
+
 
 
 
@@ -105,6 +149,7 @@ Veja abaixo os estilos mais pedidos!!
 
 </html>
 <script>
+    let corHEX = ['#D35400', '#784212', '#F1C40F', '#922B21', '#6E2C00', '#B32405']
     function logo_over() {
         logo.src = "img/electric-guitar.png"
     }
@@ -144,7 +189,48 @@ Veja abaixo os estilos mais pedidos!!
 
 
     }
-    function comecar(){
-        window.location.href="musicas.html"
+    function comecar() {
+        window.location.href = "musicas.html"
     }
+    const labels = [
+        'Heavy Metal',
+        'Thrash Metal',
+        'Black Metal',
+        'Death Metal',
+        'Nu Metal',
+        'Power Metal',
+        'Outro',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: corHEX,
+            borderColor: '#1B2631',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+    };
+
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    position: 'left',
+                    display: true,
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            }
+
+        }
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
 </script>
