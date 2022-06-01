@@ -258,3 +258,14 @@ a {
 
 
 }
+
+#inp_lupa {
+  border-bottom: 1px solid black;
+
+}
+
+#inp_lupa:focus {
+  border-bottom: 1px solid #ec580e;
+
+
+}

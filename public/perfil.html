@@ -21,14 +21,16 @@
                     src="img/electric-guitar-black.png" alt="">
             </a>
             <h5 class="atual">Sobre nos</h5>
-            <a href="valores.html"><h5>Valores</h5></a> 
+            <a href="valores.html">
+                <h5>Valores</h5>
+            </a>
             <a href="musicas.html">
                 <h5>Musicas</h5>
             </a>
 
 
             <div class="div_search">
-                <input class="search" type="text">
+                <input id="inp_lupa" class="search" type="text">
                 <img class="lupa_search" src="img/lupa-arredondada.png" alt="">
             </div>
             <div class="dropdown">
@@ -36,7 +38,7 @@
                         alt=""></div>
                 <div class="dropdown_menu">
                     <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
-                    <div onclick="sair()"  class="drop_div">Sair </div class="drop_div">
+                    <div onclick="sair()" class="drop_div">Sair </div class="drop_div">
                 </div>
             </div>
         </div>
@@ -213,7 +215,7 @@
 
         }
     }
-    
+
     function sair() {
         sessionStorage.clear()
         checar()

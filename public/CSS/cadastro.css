@@ -137,7 +137,7 @@ select:focus {
 
 }
 
-#inp::placeholder {
+.search::placeholder {
   color: gainsboro;
   text-align: center;
   font-size: 4h;

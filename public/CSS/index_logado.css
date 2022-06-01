@@ -179,14 +179,18 @@ body {}
 }
 
 .container_explicando_valores {
-  position: absolute;
   background-color: transparent;
   height: 10%;
   width: 100%;
-  position: absolute;
   transition: 300ms;
   transform: translateY(-60px);
   opacity: 0;
+  font-weight: 100;
+  color: black;
+  font-size: 4vh;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  padding-top: 3vh;
 }
 
 .container_valores:hover {
@@ -202,16 +206,7 @@ body {}
 
 }
 
-.titulo {
-  font-weight: 100;
-  color: black;
-  font-size: 4vh;
-  text-align: center;
-  font-family: 'Staatliches', cursive;
-  padding-top: 2vh;
-
-
-}
+.titulo {}
 
 .container_txt_explicacao {
   height: 100%;

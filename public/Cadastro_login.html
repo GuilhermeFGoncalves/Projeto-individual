@@ -26,10 +26,10 @@
             </div>
 
             <div class="div_inp">
-                <input id="inp" class="search" placeholder="Email" type="text" name="" id="email_input">
+                <input class="search" placeholder="Email" type="text" name="" id="email_input">
             </div>
             <div class="div_inp2">
-                <input id="inp" class="search" placeholder="Senha" type="password" name="" id="senha_input">
+                <input class="search" placeholder="Senha" type="password" name="" id="senha_input">
             </div>
 
 
@@ -55,19 +55,19 @@
             <div class="container_inp">
 
                 <div class="div_inp_cadastro">
-                    <input id="inp" class="search" placeholder="Usuarios" type="text" name="" id="user_inp">
+                    <input class="search" placeholder="Usuarios" type="text" name="" id="user_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                    <input id="inp" class="search" type="text" placeholder="Email" name="" id="email_inp">
+                    <input class="search" type="text" placeholder="Email" name="" id="email_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                    <input id="inp" class="search" type="text" name="" placeholder="Banda Favorita" id="favorita">
+                    <input class="search" type="text" name="" placeholder="Banda Favorita" id="favorita">
                 </div>
                 <div class="div_inp_cadastro">
-                    <input id="inp" class="search" type="password" name="" placeholder="Senha" id="senha_inp">
+                    <input class="search" type="password" name="" placeholder="Senha" id="senha_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                    </span><input id="inp" class="search" type="password" placeholder="Confirmar senha" name=""
+                    </span><input class="search" type="password" placeholder="Confirmar senha" name=""
                         id="confirmar_senha_inp">
                 </div>
                 <div class="div_inp_cadastro">
@@ -119,12 +119,11 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
+
         if (emailVar == "" || senhaVar == "") {
             alert_erro.style.display = "block"
             txt_alert_erro.innerHTML = "Campos não preenchidos";
             return false;
-        } else {
-            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", emailVar);
@@ -147,7 +146,7 @@
 
                 resposta.json().then(json => {
                     console.log(json);
-                    alert(JSON.stringify(json));
+
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.usuario;
@@ -182,10 +181,6 @@
         return false;
     }
 
-    function sumirMensagem() {
-        alert_erro.style.display = "none"
-    }
-
     function cadastrar() {
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -212,7 +207,7 @@
 
         } else {
             document.getElementById("alert_erro").style.display = "none"
-            window.location.href = "index.html"
+
 
 
             if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
@@ -222,9 +217,7 @@
                 finalizarAguardar();
                 return false;
             }
-            else {
-                setInterval(sumirMensagem, 5000)
-            }
+
 
             // Enviando o valor da nova input
             fetch("/usuarios/cadastrar", {
@@ -246,15 +239,7 @@
 
                 console.log("resposta: ", resposta);
                 if (resposta.ok) {
-                    alert_erro.display = "block";
-                    txt_alert_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                    setTimeout(() => {
-                        window.location = "login.html";
-                    }, "5000")
-
-                    limparFormulario();
-                    finalizarAguardar();
+                    cad()
                 } else {
                     throw ("Houve um erro ao tentar realizar o cadastro!");
                     return false
