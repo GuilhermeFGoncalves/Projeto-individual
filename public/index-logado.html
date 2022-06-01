@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="checar()">
+<body onload="checar(),resgatar()">
     <!-- Header -->
 
     <nav id="header" class="header">
@@ -149,7 +149,108 @@
 
 </html>
 <script>
+    let dados=[]
+     function resgatar() {
+        {
+
+            fetch("/usuarios/gerar_grafico", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+
+                })
+            }).then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!")
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        checar()
+                
+                        var thrash =json.filter(res=> res.estilo == 'thrash_Metal')
+                        var Heavy =json.filter(res=> res.estilo == 'Heavy_Metal')
+                        var black =json.filter(res=> res.estilo == 'Black_metal')
+                        var nu =json.filter(res=> res.estilo == 'Nu_metal')
+                        var power =json.filter(res=> res.estilo == 'Power_metal')
+                        var death =json.filter(res=> res.estilo == 'Death_metal')
+                        var outro =json.filter(res=> res.estilo == 'outro')
+                    dados=[
+                        thrash.length,
+                        Heavy.length,
+                        black.length,
+                        nu.length,
+                        power.length,
+                        death.length,
+                        outro.length]
+                        const labels = [
+        
+        'Thrash Metal',
+        'Heavy Metal',
+        'Black Metal',
+        'Nu Metal',
+        'Power Metal',
+        'Death Metal',
+        'Outro',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: corHEX,
+            borderColor: '#1B2631',
+            data: dados,
+        }]
+    };
+
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    position: 'left',
+                    display: true,
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            }
+
+        }
+    };
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+
+
+
+                    });
+
+                } else {
+
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                    });
+                }
+
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+
+
+        }
+    }
     let corHEX = ['#D35400', '#784212', '#F1C40F', '#922B21', '#6E2C00', '#B32405']
+
     function logo_over() {
         logo.src = "img/electric-guitar.png"
     }
@@ -186,51 +287,12 @@
             window.location = "index.html"
 
         }
-
-
     }
+
     function comecar() {
         window.location.href = "musicas.html"
     }
-    const labels = [
-        'Heavy Metal',
-        'Thrash Metal',
-        'Black Metal',
-        'Death Metal',
-        'Nu Metal',
-        'Power Metal',
-        'Outro',
-    ];
+  
 
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: corHEX,
-            borderColor: '#1B2631',
-            data: [0, 10, 5, 2, 20, 30, 45],
-        }]
-    };
-
-    const config = {
-        type: 'pie',
-        data: data,
-        options: {
-            plugins: {
-                legend: {
-                    position: 'left',
-                    display: true,
-                    labels: {
-                        color: 'white'
-                    }
-                }
-            }
-
-        }
-    };
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
-
+   
 </script>

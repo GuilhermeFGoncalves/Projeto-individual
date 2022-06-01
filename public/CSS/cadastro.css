@@ -57,9 +57,16 @@ width: 500px;
 background-color: white;
 opacity: 87%;
 height: 80%;
-
-
+animation-name: vinda;
+animation-duration: 900ms;
 }
+@keyframes vinda{
+  from{
+    transform: translateX(-1000px);
+  }
+}
+
+
 .container_cadastro h3{
 font-weight: 300;
 color: #EC5800 ;

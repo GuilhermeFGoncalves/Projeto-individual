@@ -55,13 +55,15 @@ width: 15px;
   display: flex;
   justify-content: space-around;
   opacity: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .logo {
-  height: 50px;
-  width: 50px;
+  height: 8vh;
+  width: 8vh;
   align-self: flex-start;
-  padding-top: 5px;
+  padding-top: 1vh;
   cursor: pointer;
 }
 
@@ -69,6 +71,7 @@ width: 15px;
   color: black;
   align-self: inherit;
   transition: 300ms;
+  font-size: 2vh;
 }
 
 .header h5:hover {
@@ -78,12 +81,12 @@ width: 15px;
 }
 
 .search {
-  height: 30px;
+  height: 4vh;
   align-self: center;
   width: 90%;
   display: block;
   border: 0;
-  border-bottom: 1px solid black;
+  border-bottom: 0.3vh solid black;
   outline: none;
   transition: 400ms;
   background-color: rgba(255, 255, 255, 0);
@@ -94,8 +97,8 @@ width: 15px;
   border-bottom: 1px solid #ec5800;
 }
 .lupa_search {
-  height: 17px;
-  width: 17px;
+  height: 4vh;
+  width: 4vh;
   align-self: center;
   cursor: pointer;
 }
@@ -105,7 +108,7 @@ width: 15px;
   justify-content: space-evenly;
   height: 60%;
   width: 20%;
-  padding-top: 15px;
+  padding-top: 3vh;
 }
 
 .footer {
@@ -123,12 +126,12 @@ width: 15px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 13vh;
 }
 
 .logo_social {
-  height: 45px;
-  width: 45px;
+  height: 8vh;
+  width: 8vh;
   cursor: pointer;
 }
 .div_social {
@@ -171,7 +174,7 @@ position: relative;
 .dropdown_menu{
 position: absolute;
 background-color: white;
-width: 100px;
+width: 15vh;
 opacity: 0;
 transition:300ms;
 border-top: 0ch;
@@ -218,7 +221,7 @@ transition: 200ms
 
 }
 .logo_perfil{
-height: 100%;
+height: 1vh;
 display: flex;
 align-items: center;
 

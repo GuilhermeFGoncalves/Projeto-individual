@@ -19,6 +19,7 @@ transition: 400ms;
 display: flex;
 justify-content: center;
 cursor: pointer;
+font-size: 3vh;
 
 }
 .riff_select_container:hover{
@@ -26,15 +27,17 @@ background-color: rgba(255, 255, 255, 0.411);
 color: #EC5800;
 border-radius: 100px;
 border: 1px solid #EC5800;
+
     }
 .container_video_dados{
 width: 100%;
-height: 300px;
+height: 40vh;
 display: flex;
 justify-content: space-around;
 }
 .riff_selector h1{
 margin: 0%;
+font-size: 4vh;
 font-weight: 300;
 color: #EC5800;
 text-align: center;
@@ -43,7 +46,7 @@ text-align: center;
 }
 .name_riff{
 font-weight: 300;
-font-size: 26pt;
+font-size: 5vh;
 }
 
 .container_riff_dica{
@@ -64,7 +67,7 @@ border: 1px solid #EC5800;
 }
 .span_dica{
 font-weight: 300;
-font-size: 95%;
+font-size: 2vh;
 text-indent: 20px;
 float: left;
 margin: 9px;
@@ -93,10 +96,10 @@ text-align: center;
 }
 .sem_riff{
 font-weight: 300;
-font-size: 22pt;
+font-size: 4vh;
 display: flex;
 align-items: center;
-text-indent: 200px;
+text-indent: 9vh;
 
 
 }

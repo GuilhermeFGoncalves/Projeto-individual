@@ -6,32 +6,32 @@
   overflow: hidden;
 }
 .container_explicacao {
-  height: 700px;
-  width: 91%;
+  height: 90vh;
+  width: 100%;
   background-color: #ec8000;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  text-indent: 50px;
+  text-indent: 5vh;
   border-radius: 0 0 1500px 0;
   transition: 500ms;
-  padding-left: 110px;
+  padding-left: 10vh;
 }
 .container_explicacao:hover {
   border-radius: 0 50px 400px 0;
   cursor: pointer;
-  height: 800px;
+  height: 100vh;
 }
 
 .container_explicacao h1 {
   font-weight: 300;
-  font-size: 35pt;
-  margin-left: 10px;
+  font-size: 8vh;
+  margin-left: 1vh;
   color: white;
 }
 .container_explicacao span {
   font-weight: 100;
-  font-size: 13pt;
+  font-size: 2.5vh;
   color: rgb(0, 0, 0);
 }
 .div_explicacao {
@@ -39,11 +39,11 @@
   width: 50%;
 }
 .sobre_mim {
-  height: 500px;
+  height: 80vh;
   width: 80%;
-  margin: 0%auto;
+  margin: 0% auto;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  margin-top: 40px;
+  margin-top: 10vh;
   border: 1px solid gainsboro;
   transition: 400ms;
   display: flex;
@@ -67,21 +67,23 @@ box-shadow: 0 0 5em rgba(0, 0, 0, 0.479);
   text-align: center;
   padding: 10px;
   color: #ec8000;
+  font-size: 5vh;
   
 }
 .txt_sobre_mim span{
 font-weight: 300;
 position: absolute;
-margin-left: 30px;
-text-indent: 20px;
+margin-left: 5vh;
+text-indent:3vh;
+font-size: 2.5vh;
 
 }
 .foto_sobre{
 
 align-self: center;
 position: relative;
-margin: 40px;
-border: 22px groove #ec8000;
+margin: 6vh;
+border: 3vh groove #ec8000;
 
 }
 .div_idolos{
@@ -123,9 +125,9 @@ flex-direction: column;
 justify-content: space-evenly;
 }
 .icon_idolo{
-  height: 200px;
- width: 200px;
- margin-top: 10px;
+  height: 33vh;
+ width: 33vh;
+ margin-top: 1vh;
 box-shadow: 0 0 10px black;
 transition: 300ms;
 border-radius: 150px;
@@ -148,7 +150,7 @@ cursor: pointer;
 font-weight: 300;
 color: #ec8000;
 text-align: center  ;
-font-size: 30pt;
+font-size: 4vh;
 }
 .container_mustaine{
   height: 50%;
@@ -170,16 +172,15 @@ border-right: 5px solid gainsboro;
 justify-content: space-around;
 }
 .desc_idolo h2{
-
   font-weight: 300; 
-font-size: 15pt;
+font-size: 3vh;
 }
 button{
 border: none;
 background-color: #ec8000;
-height: 50px;
-width: 150px;
-font-size: 14pt;
+height: 8vh;
+width: 24vh;
+font-size: 3vh;
 font-weight: 300;
 color: white;
 transition: 400ms;
@@ -194,10 +195,10 @@ cursor: pointer;
 .sobre_idolo{
 width: 70%;
 height: 100%;
-padding-left: 100px;
+padding-left: 10vh;
 overflow-y: auto;
 background:radial-gradient(ellipse at center, 
-  rgb(255, 255, 255) 0%, rgba(233, 228, 228, 0.329) 35%, #5f5f5e2a 100%);
+  rgb(255, 255, 255) 0%, rgb(233, 228, 228) 35%, #5f5f5ea2 100%);
 
 
 
@@ -212,11 +213,11 @@ flex-direction: column;
 
 }
 .signature h1{
-  font: 22pt;
+  font: 5vh;
 font-weight: 300; 
 }
 .sobre_idolo span{
-font-size: 16pt;
+font-size: 3vh;
 font-weight: 300;
 
 

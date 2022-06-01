@@ -26,5 +26,7 @@ router.post("/autenticar", function (req, res) {
 router.post("/resgatar", function (req, res) {
     usuarioController.resgatar(req, res);
 });
-
+router.post("/gerar_grafico", function (req, res) {
+    usuarioController.gerar(req, res);
+});
 module.exports = router;

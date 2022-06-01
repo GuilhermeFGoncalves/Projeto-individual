@@ -20,6 +20,13 @@ body {
   justify-content: center;
   flex-direction: column;
   opacity: 87%;
+  animation-name: subida;
+  animation-duration:400ms ;
+}
+@keyframes subida{
+  from{
+transform:translateY(500px);
+  }
 }
 
 .search {

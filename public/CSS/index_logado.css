@@ -99,7 +99,7 @@ body {}
 }
 
 .banner_tres {
-  width: 216vh;
+  width: 100%;
   height: 200vh;
   background: radial-gradient(ellipse at center,
       rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #5f5f5e7e 100%);
@@ -190,13 +190,13 @@ body {}
 }
 
 .container_valores:hover {
-  filter: grayscale(40%);
+  filter: grayscale(45%);
   cursor: pointer;
 }
 
 .container_valores:hover>.container_explicando_valores {
   height: 10%;
-  background-color: gainsboro;
+  background-color: #ff6600;
   transform: translateY(-45vh);
   opacity: 1;
 
