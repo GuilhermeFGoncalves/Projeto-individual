@@ -85,7 +85,7 @@
                 <div class="linha_um">
                     <a href="valores.html">
                         <div class="container_valores">
-                            <img style="height: 100%; width: 100%;"
+                            <img id="vic" style="height: 100%; width: 100%;"
                                 src="https://i.pinimg.com/474x/0b/05/de/0b05dee06254e2587bc87a01e1c07684.jpg" alt="">
                             <div class="container_explicando_valores">
                                 Checar meus Valores
@@ -149,6 +149,17 @@
 
 </html>
 <script>
+
+    var observer = new IntersectionObserver(function (entries) {
+        // isIntersecting is true when element and viewport are overlapping
+        // isIntersecting is false when element and viewport don't overlap
+        if (entries[0].isIntersecting == true) {
+            alert("VIC ESTÁ VISIVEL")
+        }
+    }, { threshold: [0.4] });
+
+    observer.observe(document.getElementById("vic"));
+
     let dados = []
     function resgatar() {
         {
