@@ -149,8 +149,8 @@
 
 </html>
 <script>
-    let dados=[]
-     function resgatar() {
+    let dados = []
+    function resgatar() {
         {
 
             fetch("/usuarios/gerar_grafico", {
@@ -170,63 +170,63 @@
                     resposta.json().then(json => {
                         console.log(json);
                         checar()
-                
-                        var thrash =json.filter(res=> res.estilo == 'thrash_Metal')
-                        var Heavy =json.filter(res=> res.estilo == 'Heavy_Metal')
-                        var black =json.filter(res=> res.estilo == 'Black_metal')
-                        var nu =json.filter(res=> res.estilo == 'Nu_metal')
-                        var power =json.filter(res=> res.estilo == 'Power_metal')
-                        var death =json.filter(res=> res.estilo == 'Death_metal')
-                        var outro =json.filter(res=> res.estilo == 'outro')
-                    dados=[
-                        thrash.length,
-                        Heavy.length,
-                        black.length,
-                        nu.length,
-                        power.length,
-                        death.length,
-                        outro.length]
+
+                        var thrash = json.filter(res => res.estilo == 'thrash_Metal')
+                        var Heavy = json.filter(res => res.estilo == 'Heavy_Metal')
+                        var black = json.filter(res => res.estilo == 'Black_metal')
+                        var nu = json.filter(res => res.estilo == 'Nu_metal')
+                        var power = json.filter(res => res.estilo == 'Power_metal')
+                        var death = json.filter(res => res.estilo == 'Death_metal')
+                        var outro = json.filter(res => res.estilo == 'outro')
+                        dados = [
+                            thrash.length,
+                            Heavy.length,
+                            black.length,
+                            nu.length,
+                            power.length,
+                            death.length,
+                            outro.length]
                         const labels = [
-        
-        'Thrash Metal',
-        'Heavy Metal',
-        'Black Metal',
-        'Nu Metal',
-        'Power Metal',
-        'Death Metal',
-        'Outro',
-    ];
 
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: corHEX,
-            borderColor: '#1B2631',
-            data: dados,
-        }]
-    };
+                            'Thrash Metal',
+                            'Heavy Metal',
+                            'Black Metal',
+                            'Nu Metal',
+                            'Power Metal',
+                            'Death Metal',
+                            'Outro',
+                        ];
 
-    const config = {
-        type: 'pie',
-        data: data,
-        options: {
-            plugins: {
-                legend: {
-                    position: 'left',
-                    display: true,
-                    labels: {
-                        color: 'white'
-                    }
-                }
-            }
+                        const data = {
+                            labels: labels,
+                            datasets: [{
+                                label: 'My First dataset',
+                                backgroundColor: corHEX,
+                                borderColor: '#1B2631',
+                                data: dados,
+                            }]
+                        };
 
-        }
-    };
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
+                        const config = {
+                            type: 'pie',
+                            data: data,
+                            options: {
+                                plugins: {
+                                    legend: {
+                                        position: 'left',
+                                        display: true,
+                                        labels: {
+                                            color: 'white'
+                                        }
+                                    }
+                                }
+
+                            }
+                        };
+                        const myChart = new Chart(
+                            document.getElementById('myChart'),
+                            config
+                        );
 
 
 
@@ -292,7 +292,7 @@
     function comecar() {
         window.location.href = "musicas.html"
     }
-  
 
-   
+
+
 </script>

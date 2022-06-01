@@ -1,4 +1,4 @@
-    !
+!
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,37 +8,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Lost music</title>
     <link rel="stylesheet" href="CSS/cadastro.css">
+    <link rel="stylesheet" href="CSS/login.css">
     <link rel="stylesheet" href="CSS/css_geral.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-image:url(img/1078877.jpg);">
+<body style="background-image:url(img/shows-coronavirus.jpg);background-size: cover;">
     <div class="banner_cad">
+        <div id="container_login" class="container_login">
+            <div class="selector">
+                <h3 onclick="log()" class="select_tipo">Cadastro</h3>
+                <h3 id="agora" class="select_tipo">Login</h3>
+            </div>
+
+            <div class="div_inp">
+                <input id="inp" class="search" placeholder="Email" type="text" name="" id="email_input">
+            </div>
+            <div class="div_inp2">
+                <input id="inp" class="search" placeholder="Senha" type="password" name="" id="senha_input">
+            </div>
+
+
+            <span style="color: white;"> Esqueci a senha</span>
+            <br>
+
+
+            <button onclick="entrar()" class="btn_entrar">Entrar</button> <br>
+
+
+
+
+        </div>
 
         <div id="alert_erro" class="alert_erro">
             <h4 id="txt_alert_erro"></h4>
         </div>
-        <div class="container_cadastro">
-            <h3>Cadastro</h3>
+        <div id="container_cadastro" class="container_cadastro">
+            <div class="selector">
+                <h3 id="agora" class="select_tipo">Cadastro</h3>
+                <h3 onclick="cad()" class="select_tipo">Login</h3>
+            </div>
             <div class="container_inp">
 
                 <div class="div_inp_cadastro">
-                    <span>Usuario :</span> <input class="search" type="text" name="" id="user_inp">
+                    <input id="inp" class="search" placeholder="Usuarios" type="text" name="" id="user_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                    <span>Email:</span><input class="search" type="text " name="" id="email_inp">
+                    <input id="inp" class="search" type="text" placeholder="Email" name="" id="email_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                    <span>Banda favorita:</span><input class="search" type="text" name="" id="favorita">
+                    <input id="inp" class="search" type="text" name="" placeholder="Banda Favorita" id="favorita">
                 </div>
                 <div class="div_inp_cadastro">
-                    <span>Senha :</span><input class="search" type="password" name="" id="senha_inp">
+                    <input id="inp" class="search" type="password" name="" placeholder="Senha" id="senha_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                    <span>Confirmar <br>senha :</span><input class="search" type="password" name=""
+                    </span><input id="inp" class="search" type="password" placeholder="Confirmar senha" name=""
                         id="confirmar_senha_inp">
                 </div>
                 <div class="div_inp_cadastro">
-                   Toca Algum instrumento?  
+                    Toca Algum instrumento?
                     <select name="" id="instrumento">
                         <option value="Guitarra">Guitarra</option>
                         <option value="Baixo">Baixo</option>
@@ -48,24 +81,30 @@
                     </select>
                 </div>
                 <div class="div_inp_cadastro">
-                    Nivel de habilidade  
-                     <select name="" id="nivel">
-                         <option value="iniciante">Inicante</option>
-                         <option value="Intermediario">Intermediario</option>
-                         <option value="avançado">Avançado</option>
-                         <option value="profissional">Profissional</option>
-                     </select>
-                 </div>
+                    Nivel de habilidade
+                    <select name="" id="nivel">
+                        <option value="iniciante">Inicante</option>
+                        <option value="Intermediario">Intermediario</option>
+                        <option value="avançado">Avançado</option>
+                        <option value="profissional">Profissional</option>
+                    </select>
+                </div <a href="index.html"><button onclick="cadastrar()" class="btn_entrar">Criar conta</button></a>
+                <br>
+            </div>
 
 
 
-            </div <a href="index.html"><button onclick="cadastrar()" class="btn_entrar">Criar conta</button></a> <br>
 
         </div>
 
 
+        <div id="alert_erro" class="alert_erro">
+            <h4 id="txt_alert_erro"></h4>
+        </div>
+
 
     </div>
+
 </body>
 
 
@@ -75,7 +114,78 @@
 
 </html>
 <script>
- 
+    function entrar() {
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            alert_erro.style.display = "block"
+            txt_alert_erro.innerHTML = "Campos não preenchidos";
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    alert(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.usuario;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.INSTRUMENTO = json.instrumento;
+                    sessionStorage.BANDAFAVORITA = json.bandaFavorita;
+                    sessionStorage.NIVEL = json.nivel;
+                    sessionStorage.DATA = json.DTinicio;
+
+                    setTimeout(function () {
+                        window.location = "index-logado.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    document.getElementById("alert_erro")
+                    txt_alert_erro.innerHTML = `Email invalido`
+
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        alert_erro.style.display = "none"
+    }
+
     function cadastrar() {
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -86,8 +196,8 @@
         var nivelVar = nivel.value;
         var favoritaVar = favorita.value;
         var confirmacaoSenhaVar = confirmar_senha_inp.value;
-     
-        if (emailVar == "" || nomeVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || favorita=="") {
+
+        if (emailVar == "" || nomeVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || favorita == "") {
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Dados não preenchidos`
 
@@ -96,69 +206,93 @@
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Senha ou email invalido`
 
-        } else if (senhaVar !=confirmacaoSenhaVar) {
+        } else if (senhaVar != confirmacaoSenhaVar) {
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Senhas diferentes`
 
         } else {
             document.getElementById("alert_erro").style.display = "none"
-            window.location.href="index.html"
+            window.location.href = "index.html"
 
-            
+
             if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
                 cardErro.style.display = "block"
                 txt_alert_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-                
+
                 finalizarAguardar();
                 return false;
             }
             else {
                 setInterval(sumirMensagem, 5000)
             }
-            
+
             // Enviando o valor da nova input
             fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                favoritaServer: favoritaVar,
-                instrumentoServer: instrumentoVar,
-                nivelServer: nivelVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    favoritaServer: favoritaVar,
+                    instrumentoServer: instrumentoVar,
+                    nivelServer: nivelVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
 
-            console.log("resposta: ", resposta);
-            if (resposta.ok) {
-                alert_erro.display = "block";
-                txt_alert_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-                
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "5000")
-                
-                limparFormulario();
+                console.log("resposta: ", resposta);
+                if (resposta.ok) {
+                    alert_erro.display = "block";
+                    txt_alert_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "5000")
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                    return false
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
                 finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-                return false
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
+            });
 
-        return false;
+            return false;
+        }
+
+        function sumirMensagem() {
+            cardErro.style.display = "none"
+        }
     }
-    
-    function sumirMensagem() {
-        cardErro.style.display = "none"
+    function cad() {
+        container_cadastro.style.animation = "ida 1s forwards";
+        container_cadastro.classList.toggle('ida');
+        setTimeout(esperar(), 10000);
+
+
+
+
+
+
+
     }
-}
+    function esperar() {
+        container_login.style.animation = "subir 1s forwards";
+        document.getElementById("container_login").style.display = "flex"
+
+
+    }
+    function log() {
+        container_login.style.animation = "subida_dois  1s forwards";
+        container_login.classList.toggle('subida');
+        container_cadastro.style.animation = "ida_dois  1s forwards";
+        container_cadastro.classList.toggle('ida_dois')
+    }
 </script>

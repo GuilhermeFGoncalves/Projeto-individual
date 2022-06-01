@@ -1,32 +1,11 @@
-body {
-  margin: 0%;
-  padding: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-  background-image: url(img/jonathan-hart-bodycup.jpg);
-  background-size: cover;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  flex-direction: column;
-}
-
 .container_login {
   height: 500px;
   width: 500px;
-  background-color: white;
-  display: flex;
+  background-color: #1b2631a1;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  opacity: 87%;
-  animation-name: subida;
-  animation-duration:400ms ;
-}
-@keyframes subida{
-  from{
-transform:translateY(500px);
-  }
 }
 
 .search {
@@ -39,6 +18,8 @@ transform:translateY(500px);
   outline: none;
   transition: 400ms;
   font-size: medium;
+  color: white;
+  text-align: center;
 }
 
 .search:focus {
@@ -53,6 +34,7 @@ transform:translateY(500px);
   flex-direction: row;
   margin-bottom: 50px;
 }
+
 .div_inp2 {
   height: 30px;
   width: 80%;
@@ -61,6 +43,7 @@ transform:translateY(500px);
   flex-direction: row;
   margin-bottom: 10px;
 }
+
 .div_inp3 {
   height: 9px;
   width: 80%;
@@ -70,11 +53,7 @@ transform:translateY(500px);
   margin-bottom: 40px;
 }
 
-.container_login h3 {
-  color: #ec5800;
-  font-size: 20pt;
-  font-weight: 400;
-}
+
 
 .btn_comecar {
   height: 50px;
@@ -104,37 +83,39 @@ transform:translateY(500px);
   cursor: pointer;
   align-self: center;
 }
-.alert_erro{
+
+.alert_erro {
   width: 500px;
-  height:  100px;
-  border:5px solid  rgba(255, 0, 0, 0.384);
+  height: 100px;
+  border: 5px solid rgba(255, 0, 0, 0.384);
   margin-bottom: 10px;
   background-color: rgb(212, 120, 120);
   display: none;
   color: white;
 
-  }
-  .alert_erro h4{
-    font-size: 20pt;
-    font-weight: 100;
-    text-align: center;
-  }
-  
-  .banner_cad{
+}
+
+.alert_erro h4 {
+  font-size: 20pt;
+  font-weight: 100;
+  text-align: center;
+}
+
+.banner_cad {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
-  
-  
-  }
-  .banner_cad h4{
+
+
+
+}
+
+.banner_cad h4 {
   font-size: 22pt;
   color: white;
   font-weight: 300;
   text-align: center;
-  }
-  
+}

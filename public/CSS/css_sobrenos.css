@@ -1,4 +1,5 @@
 .div_banner {
+  background-image: url(/public/img/shows-coronavirus.jpg);
   background-size: cover;
   height: 110vh;
   display: flex;
@@ -6,46 +7,63 @@
   width: 100%;
 
 }
-.div_direita{
-height: 100%;
-width: 100%;
-background-image: url(/public/img/shows-coronavirus.jpg);
-background-size: cover;
-display: flex;
-align-items: initial;
-justify-content: center;
+
+
+
+.div_direita {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: initial;
+  justify-content: center;
 }
-.div_direita span{
-color: white;
-font-weight: 100;
-font-size: 4vh;
-margin-top: 200px;
-cursor: pointer;
+
+.txt_banner {
+  color: white;
+  font-weight: 100;
+  font-size: 4vh;
+  margin-top: 30vh;
+  cursor: pointer;
+  text-align: center;
 }
 
 
 .atual {
   font-weight: bolder;
 }
+
 a {
   text-decoration: none;
 }
 
-.cad{
-border:0.3vh solid #ec800e;
-height: 8vh;
-width: 20vh;
-background-color: transparent;
-color: #ec800e;
-font-size:2vh;
-border-radius: 30px;
-transition: 400ms;
+.cad {
+  border: 0.3vh solid #ec800e;
+  height: 8vh;
+  width: 20vh;
+  background-color: transparent;
+  color: #ec800e;
+  font-size: 2vh;
+  border-radius: 30px;
+  transition: 400ms;
 }
-.cad :hover{
-border:0.3vh solid cornflowerblue;
-color:cornflowerblue;
 
+.cad :hover {
+  border: 0.3vh solid cornflowerblue;
+  color: cornflowerblue;
+}
 
+.descricao {
+  height: 65%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  
+.txt_descricao {
+  color: #ec800e;
+  font-weight: 300;
+  font-size: 4vh;
+
 }

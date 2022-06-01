@@ -6,44 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Lost music</title>
-    <link rel="stylesheet" href="CSS/login.css">
+
 </head>
 
 <body style="background-image:url(img/jonathan-hart-bodycup.jpg) ;">
 
 
-    <div id="alert_erro" class="alert_erro">
-        <h4 id="txt_alert_erro"></h4>
-    </div>
-    <div class="container_login">
-        <h3>Login</h3>
 
-        <div class="div_inp">
-            Email : <input class="search" type="text" name="" id="email_input">
-        </div>
-        <div class="div_inp2">
-            senha : <input class="search" type="password" name="" id="senha_input">
-        </div>
-
-
-        <span> Esqueci a senha</span>
-        <br>
-
-
-        <button onclick="entrar()" class="btn_comecar">Entrar</button> <br>
-        <a href="Cadastro.html"><button class="btn_comecar">Cadastrar</button></a>
-
-
-
-
-    </div>
 
 </body>
 
 </html>
 <script>
     function entrar() {
-      
+
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
@@ -70,7 +46,7 @@
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
 
-            if (resposta.ok) {  
+            if (resposta.ok) {
                 console.log(resposta);
 
                 resposta.json().then(json => {
@@ -84,7 +60,7 @@
                     sessionStorage.BANDAFAVORITA = json.bandaFavorita;
                     sessionStorage.NIVEL = json.nivel;
                     sessionStorage.DATA = json.DTinicio;
-                  
+
                     setTimeout(function () {
                         window.location = "index-logado.html";
                     }, 1000); // apenas para exibir o loading
@@ -97,7 +73,7 @@
 
                 resposta.text().then(texto => {
                     document.getElementById("alert_erro")
-                    txt_alert_erro.innerHTML=`Email invalido`
+                    txt_alert_erro.innerHTML = `Email invalido`
 
                     console.error(texto);
                 });

@@ -1,97 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost music</title>
 
-    <link rel="stylesheet" href="CSS/css_sobrenos.css" />
-    <link rel="stylesheet" href="CSS/css_geral.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost music</title>
 
-  <body>
-    <!-- Header -->
+  <link rel="stylesheet" href="CSS/css_sobrenos.css" />
+  <link rel="stylesheet" href="CSS/css_geral.css" />
+</head>
 
-    <nav id="header" class="header">
-      <div class="container_header">
-        <a href="index.html"
-          ><img
-            id="logo"
-            onmouseout="logo_out()"
-            onmouseover="logo_over()"
-            class="logo"
-            src="img/electric-guitar-black.png"
-            alt=""
-          />
-        </a>
-        <h5 class="atual">Sobre nos</h5>
-        <a href="valores.html"><h5>Valores</h5></a>
-        <a href="Cadastro.html"><h5>Cadastro</h5></a>
-        <a href="login.html">
-          <h5>login</h5>
-        </a>
+<body>
+  <!-- Header -->
 
-        <div class="div_search">
-          <input class="search" type="text" />
-          <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
-        </div>
-      </div>
-    </nav>
+  <nav id="header" class="header">
+    <div class="container_header">
+      <a href="index.html"><img id="logo" onmouseout="logo_out()" onmouseover="logo_over()" class="logo"
+          src="img/electric-guitar-black.png" alt="" />
+      </a>
+      <h5 class="atual">Sobre nos</h5>
+      <a href="valores.html">
+        <h5>Valores</h5>
+      </a>
+      <a href="Cadastro.html">
+        <h5>Cadastro</h5>
+      </a>
+      <a href="login.html">
+        <h5>login</h5>
+      </a>
 
-    <!-- banner -->
-    <div class="div_banner">
-      <!-- <div class="div_lateral">
-            <h3>Já se pegou perdido tentando aprender uma musica
-                incrivel que acabou de descobrir,<br>
-                mas não acha a tablatura em nenhum lugar?<BR>
-                e você ainda não esta no nivel de conseguir aprender sozinho.
-                <br>
-                <br>
-                <br>
-                <h2>Tudo termina agora</H2>
-                <h3>Agora você tem oque é preciso para tocar o quanto desejar</h3>
-                <br>
-                <br>
-                <h3> o Lost Music é uma plataforma de aprendizado<br>
-                    para musicos que podem receber aulas de outros musicos mais experientes.<br>
-                    e para os musicos mais experientes uma oportunidade de aprender musicas novas
-                    e manter o espirito das cordas vivo.
-                </h3>
-                <a href="login.html"><button class="btn_comecar">Começar agora</button></a>   
-
-            </h3>
-        </div> -->
-      <div
-        style="background-image: url(img/shows-coronavirus.jpg)"
-        id="show"
-        onmouseout="banner_out()"
-        onmouseover="banner_over()"
-        class="div_direita"
-      >
-        <span id="txt_banner_direita">Toque como seus herois</span>
-        <a href=""></a>
-      <button class="cad" >Cadastrar</button>
+      <div class="div_search">
+        <input class="search" type="text" />
+        <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
       </div>
     </div>
-    <!-- footer -->
-    <div class="footer">
-      <div class="container_footer">
-        <div class="div_social">
-          <img class="logo_social" src="img/whatsapp.png" alt="" />
-          <img class="logo_social" src="img/instagram.png" alt="" />
-          <img class="logo_social" src="img/facebook (1).png" alt="" />
-        </div>
-        <br />
+  </nav>
 
-        <div class="div_txt">
-          <h5>Suporte</h5>
-          <h5>INFO</h5>
-          <h5>INFO</h5>
-        </div>
+  <!-- banner -->
+  <div style="background-image: url(img/shows-coronavirus.jpg);" class="div_banner">
+    <div class="descricao">
+      <span class="txt_descricao">
+        A lost Music é um projeto que foca em ajudar pessoas a aprenderem musicas<br>
+        Que não são faceis de tocar ou de achar alguem pra ensinar!<br>
+        Aqui nós te escutamos manda sua sugestão e espere algum professor te responder!
+      </span>
+    </div>
+    <span class="txt_banner">Toque como seus herois</span>
+
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <div class="container_footer">
+      <div class="div_social">
+        <img class="logo_social" src="img/whatsapp.png" alt="" />
+        <img class="logo_social" src="img/instagram.png" alt="" />
+        <img class="logo_social" src="img/facebook (1).png" alt="" />
+      </div>
+      <br />
+
+      <div class="div_txt">
+        <h5>Suporte</h5>
+        <h5>INFO</h5>
+        <h5>INFO</h5>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 <script>
   function logo_over() {
@@ -102,16 +78,16 @@
     logo.src = "img/electric-guitar-black.png";
   }
 
-  function banner_over() {
-    show.style.backgroundImage =
-      "url(https://m1newstv.com/storage/2019/01/m1newstv_rock_facenews.gif)";
-    txt_banner_direita.innerHTML =
-      " Viva os melhores momentos de adorar a musica<br>";
-    btn_none.style.Display = "flex";
-  }
+  // function banner_over() {
+  //   show.style.backgroundImage =
+  //     "url(https://m1newstv.com/storage/2019/01/m1newstv_rock_facenews.gif)";
+  //   txt_banner_direita.innerHTML =
+  //     " Viva os melhores momentos de adorar a musica<br>";
+  //   btn_none.style.Display = "flex";
+  // }
 
-  function banner_out() {
-    show.style.backgroundImage = "url(img/shows-coronavirus.jpg)";
-    txt_banner_direita.innerHTML = "Toque como seus herois";
-  }
+  // function banner_out() {
+  //   show.style.backgroundImage = "url(img/shows-coronavirus.jpg)";
+  //   txt_banner_direita.innerHTML = "Toque como seus herois";
+  // }
 </script>
