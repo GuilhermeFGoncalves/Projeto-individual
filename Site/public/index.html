@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="CSS/css_sobrenos.css" />
     <link rel="stylesheet" href="CSS/css_geral.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -67,11 +73,15 @@
             Somos um site que ajuda Pessoas a seguirem seus sonhos na musica<br />
             Aqui você tera suporte para aprender mais com professores que gostam
             da musica que você gosta!
-            <div  class="btn_line">
-              <a href="Cadastro_login.html"><button  id="btn" class="btn_cad">Cadastrar</button></a>
+            <div class="btn_line">
+              <a href="Cadastro_login.html"
+                ><button id="btn" class="btn_cad">Cadastrar</button></a
+              >
               <button id="btn" class="btn_login">Valores</button>
             </div>
           </div>
+          <img class="vic_gif" src="https://i.kym-cdn.com/photos/images/original/001/177/653/442.gif" alt="">
+
         </div>
       </div>
     </div>
@@ -79,9 +89,9 @@
     <div class="footer">
       <div class="container_footer">
         <div class="div_social">
-          <img class="logo_social" src="img/whatsapp.png" alt="" />
-          <img class="logo_social" src="img/instagram.png" alt="" />
-          <img class="logo_social" src="img/facebook (1).png" alt="" />
+         <a href="">  <img class="logo_social" src="img/whatsapp.png" alt="" /></a>
+          <a href=""><img class="logo_social" src="img/instagram.png" alt="" /></a>
+          <a href=""><img class="logo_social" src="img/facebook (1).png" alt="" /></a>
         </div>
         <br />
 
@@ -102,13 +112,11 @@
       if (entries[0].isIntersecting == true) {
         txt_explic.style.animation = "chegada 1s forwards";
         txt_explic.classList.toggle("chegada");
-    
-     
       }
     },
     { threshold: [0.2] }
   );
-  observer.observe(document.getElementById("txt_explic"));  
+  observer.observe(document.getElementById("txt_explic"));
 
   function logo_over() {
     logo.src = "img/electric-guitar.png";

@@ -15,6 +15,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
 </head>
 
 <body style="background-image:url(img/shows-coronavirus.jpg);background-size: cover;">
@@ -45,7 +51,7 @@
         </div>
 
         <div id="alert_erro" class="alert_erro">
-            <h4 id="txt_alert_erro"></h4>
+            <h4 id="txt_alert_erro">Campos não preenchidos</h4>
         </div>
         <div id="container_cadastro" class="container_cadastro">
             <div class="selector">
@@ -95,12 +101,7 @@
 
 
 
-        </div>
-
-
-        <div id="alert_erro" class="alert_erro">
-            <h4 id="txt_alert_erro"></h4>
-        </div>
+        </div>  
 
 
     </div>
@@ -114,6 +115,10 @@
 
 </html>
 <script>
+    function sumir_txt(){
+        document.getElementById("alert_erro").style.display = "none"
+
+    }
     function entrar() {
 
         var emailVar = email_input.value;
@@ -123,6 +128,11 @@
         if (emailVar == "" || senhaVar == "") {
             alert_erro.style.display = "block"
             txt_alert_erro.innerHTML = "Campos não preenchidos";
+            setTimeout(() => {
+                sumir_txt()
+            }, 1000);
+
+            
             return false;
         }
 
@@ -163,19 +173,24 @@
                 });
 
             } else {
+                alert_erro.style.display = "block"
+            txt_alert_erro.innerHTML = "Houve um erro ao tentar realizar o login!";
+            setTimeout(() => {
+                sumir_txt()
+            }, 1000);
 
                 console.log("Houve um erro ao tentar realizar o login!");
 
-                resposta.text().then(texto => {
-                    document.getElementById("alert_erro")
-                    txt_alert_erro.innerHTML = `Email invalido`
-
-                    console.error(texto);
-                });
+             
             }
 
         }).catch(function (erro) {
             console.log(erro);
+            alert_erro.style.display = "block"
+            txt_alert_erro.innerHTML = "Erro no Cadastro";
+            setTimeout(() => {
+                sumir_txt()
+            }, 1000);
         })
 
         return false;
@@ -195,15 +210,24 @@
         if (emailVar == "" || nomeVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || favorita == "") {
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Dados não preenchidos`
+            setTimeout(() => {
+                sumir_txt()
+            }, 1000);
 
 
         } else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Senha ou email invalido`
+            setTimeout(() => {
+                sumir_txt()
+            }, 1000);
 
         } else if (senhaVar != confirmacaoSenhaVar) {
             document.getElementById("alert_erro").style.display = "block"
             txt_alert_erro.innerHTML = `Senhas diferentes`
+            setTimeout(() => {
+                sumir_txt()
+            }, 2000);
 
         } else {
             document.getElementById("alert_erro").style.display = "none"
@@ -241,20 +265,30 @@
                 if (resposta.ok) {
                     cad()
                 } else {
+                    console.log(erro);
+            alert_erro.style.display = "block"
+            txt_alert_erro.innerHTML = "Erro no Cadastro";
+            setTimeout(() => {
+                sumir_txt()
+            }, 2000);
                     throw ("Houve um erro ao tentar realizar o cadastro!");
                     return false
                 }
             }).catch(function (resposta) {
+                alert_erro.style.display = "block"
+            txt_alert_erro.innerHTML = "Erro no Cadastro";
+            setTimeout(() => {
+                sumir_txt()
+            }, 2000);
                 console.log(`#ERRO: ${resposta}`);
-                finalizarAguardar();
+                console.log(erro);
+
             });
 
             return false;
         }
 
-        function sumirMensagem() {
-            cardErro.style.display = "none"
-        }
+    
     }
     function cad() {
         container_cadastro.style.animation = "ida 1s forwards";

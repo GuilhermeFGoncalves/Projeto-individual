@@ -12,7 +12,7 @@ body {
   margin: 0%;
   padding: 0%;
   background-color: rgb(255, 255, 255);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Roboto', sans-serif;
   height: 100vh;
 
 }
@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .search:focus {
-  border-bottom: 1px solid #ec5800;
+  border-bottom: 1px solid #5A0002;
 }
 
 .lupa_search {
@@ -159,6 +159,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 55px;
   display: flex;
+  font-weight: bolder;
+  font-size: 3.5vh;
   justify-content: space-around;
 }
 

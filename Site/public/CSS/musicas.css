@@ -1,3 +1,6 @@
+body{
+  font-family:'Roboto', sans-serif;
+}
 .div_banner {
   background-size: cover;
   height: 110vh;
@@ -19,7 +22,6 @@
   font-weight: 300;
   text-indent: 4vh;
   margin-right: 3vh;
-  font-weight: 500;
   color: cornflowerblue;
   font-size: 3vh;
 }
@@ -86,12 +88,12 @@
 
 
 .div_musica h4 {
-  font-weight: 300;
+  font-weight: bold;
   margin: 0%;
   font-size: 3vh;
 }
 .div_musica h6 {
-  font-weight: 100;
+  font-weight: 700;
   color: black;
   font-size: smaller;
   margin: 0%;
@@ -172,16 +174,18 @@ font-size: 2vh;
 width:40vh;
 height: 40vh;
 margin-left: 300px;
-}.sobre_musica{
+}
+.sobre_musica{
 float: left;
 text-indent: 5vh;
 padding-left: 5vh;
 padding-bottom: 3vh;
 font-size: 2.4vh;
+font-weight: 700;
 }
 i{
 color: black;
-font-weight: 300;
+font-weight: 700;
 font-size: 2.4vh;
 
 }
