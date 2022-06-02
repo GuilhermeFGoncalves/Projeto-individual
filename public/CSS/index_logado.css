@@ -108,7 +108,7 @@ body {}
 }
 
 .container_dash {
-  background-color: #EC8000;
+  background-color:  #BC3908;
   height: 65vh;
   width: 170vh;
   transform: rotate(1deg) translateY(10vh);
@@ -160,19 +160,19 @@ body {}
   height: 100%;
   align-self: flex-end;
   background-color: white;
-  animation-name: puxar;
-  animation-duration: 1s;
-  transform: translateX(50px);
-  animation-delay: 1s;
+  transform: translateX(-200px);
+  opacity: 0;
   box-shadow: 0 0 15em rgba(0, 0, 0, 0.623);
   transition: 700ms;
   position: relative;
 }
-
+.puxar{
+  animation: puxar 1s fowards;
+}
 @keyframes puxar {
-  from {
-    transform: translateX(-400px);
-    opacity: 0;
+  to {
+    transform: translateX(50px);
+    opacity: 1;
 
   }
 
@@ -206,7 +206,6 @@ body {}
 
 }
 
-.titulo {}
 
 .container_txt_explicacao {
   height: 100%;

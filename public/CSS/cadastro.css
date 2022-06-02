@@ -74,7 +74,7 @@
   margin-top: 5vh;
   width: 100%;
   border: 0;
-  background-color: rgb(199, 47, 77);
+  background-color: #5A0002;
   color: white;
   font-size: 12pt;
   transition: 400ms;
@@ -82,7 +82,7 @@
 }
 
 .btn_entrar:hover {
-  background-color: #EC5800;
+  background-color: #230007;
   color: white;
   cursor: pointer;
 
@@ -167,7 +167,7 @@ select:focus {
 }
 
 #agora {
-  border-bottom: 0.5vh solid crimson;
+  border-bottom: 0.5vh solid #5A0002;
 
 
 }

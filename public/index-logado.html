@@ -84,8 +84,8 @@
             <div class="container_dois">
                 <div class="linha_um">
                     <a href="valores.html">
-                        <div class="container_valores">
-                            <img id="vic" style="height: 100%; width: 100%;"
+                        <div id="vic" class="container_valores">
+                            <img  style="height: 100%; width: 100%;"
                                 src="https://i.pinimg.com/474x/0b/05/de/0b05dee06254e2587bc87a01e1c07684.jpg" alt="">
                             <div class="container_explicando_valores">
                                 Checar meus Valores
@@ -154,9 +154,10 @@
         // isIntersecting is true when element and viewport are overlapping
         // isIntersecting is false when element and viewport don't overlap
         if (entries[0].isIntersecting == true) {
-            alert("VIC ESTÁ VISIVEL")
+            vic.style.animation = "puxar 1s forwards";
+            container_cadastro.classList.toggle('puxar');
         }
-    }, { threshold: [0.4] });
+    }, { threshold: [0.2] });
 
     observer.observe(document.getElementById("vic"));
 

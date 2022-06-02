@@ -24,16 +24,7 @@ a {
   text-decoration: none;
 }
 
-.cad {
-  border: 0.3vh solid #ec800e;
-  height: 8vh;
-  width: 20vh;
-  background-color: transparent;
-  color: #ec800e;
-  font-size: 2vh;
-  border-radius: 30px;
-  transition: 400ms;
-}
+
 
 .cad :hover {
   border: 0.3vh solid cornflowerblue;
@@ -42,7 +33,7 @@ a {
 
 .descricao {
   height: 75%;
-  background-color: rgb(0, 0, 0);
+  background-color:rgba(17, 17, 17, 255);
   width: 90%;
   flex-direction: column;
   justify-content: flex-end;
@@ -55,7 +46,6 @@ a {
   color: #ec800e;
   font-weight: 300;
   font-size: 4vh;
-
 }
 
 .titulo {
@@ -72,6 +62,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(17, 17, 17, 255);
 
 }
 
@@ -90,7 +81,7 @@ a {
 
 .explicacao {
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   background-color: rgba(17, 17, 17, 255);
 
 }
@@ -99,15 +90,16 @@ a {
   width: 50%;
   height: 100%;
   font-weight: 300;
-  font-size: 4vh;
+  font-size: 3vh;
   margin-left: 4vh;
   color: white;
-  animation-name: chegada;
-  animation-duration: 1s;
-  animation-delay: 1s;
   animation-fill-mode: forwards;
-  transform: translateX(-1000px);
+  transform: translateX(-200px);
+  opacity:0 ;
 
+}
+.chegada{
+  animation: chegada 1s forwards;
 }
 
 @keyframes chegada {
@@ -115,7 +107,49 @@ a {
 
   to {
     transform: translateX(0px);
+    opacity:1 ;
 
   }
 
 }
+.btn_line{
+height: 15vh;
+width: 100%;
+background-color:  rgba(17, 17, 17, 255);
+display: flex;
+justify-content: space-evenly;
+margin-top: 2vh;
+
+}
+.btn_cad{
+  height: 9vh;
+  width: 24vh;
+  border-radius: 5vh;
+  font-size: 2.5vh;
+  background-color: #5A0002;
+  color: white;
+  border: 0;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 500ms;
+}
+.btn_cad:hover{
+  background-color:   #230007;
+
+
+}
+.btn_login{
+  height: 9vh;
+  width: 24vh;
+  border-radius: 5vh;
+  font-size: 2vh;
+  border: 2px solid #BC3908;
+  background-color: transparent;
+  color: #BC3908;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 500ms;
+  font-size: 2.5vh;
+}
+
+

@@ -1,82 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost music</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lost music</title>
+    <link rel="stylesheet" href="CSS/css_sobrenos.css" />
+    <link rel="stylesheet" href="CSS/css_geral.css" />
+  </head>
 
-  <link rel="stylesheet" href="CSS/css_sobrenos.css" />
-  <link rel="stylesheet" href="CSS/css_geral.css" />
-</head>
+  <body>
+    <!-- Header -->
 
-<body>
-  <!-- Header -->
+    <nav id="header" class="header">
+      <div class="container_header">
+        <a href="index.html"
+          ><img
+            id="logo"
+            onmouseout="logo_out()"
+            onmouseover="logo_over()"
+            class="logo"
+            src="img/electric-guitar-black.png"
+            alt=""
+          />
+        </a>
+        <h5 class="atual">Sobre nos</h5>
+        <a href="valores.html">
+          <h5>Valores</h5>
+        </a>
+        <a href="Cadastro_login.html">
+          <h5>Cadastro</h5>
+        </a>
+        <a href="Cadastro_login.html">
+          <h5>login</h5>
+        </a>
 
-  <nav id="header" class="header">
-    <div class="container_header">
-      <a href="index.html"><img id="logo" onmouseout="logo_out()" onmouseover="logo_over()" class="logo"
-          src="img/electric-guitar-black.png" alt="" />
-      </a>
-      <h5 class="atual">Sobre nos</h5>
-      <a href="valores.html">
-        <h5>Valores</h5>
-      </a>
-      <a href="Cadastro_login.html">
-        <h5>Cadastro</h5>
-      </a>
-      <a href="Cadastro_login.html">
-        <h5>login</h5>
-      </a>
-
-      <div class="div_search">
-        <input class="search" type="text" />
-        <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
+        <div class="div_search">
+          <input class="search" type="text" />
+          <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- banner -->
-  <div
-    style="background-image: url(https://www.seculodiario.com.br/images/s/Cultura/gustavo_bastos/b2ap3_large_lordofchaos_redesociais.jpg); background-size: cover;"
-    class="div_banner">
-    <div class="descricao">
-      <div class="show" style="background-image: url(img/shows-coronavirus.jpg); background-size: cover;">
-
-        <span class="titulo">Toque como seus Herois</span>
-      </div>
-      <div class="explicacao">
-        <div class="explicando">
-          Bem vindo a Lost Music! <br>
-          Somos um site que ajuda Pessoas a seguirem seus sonhos na musica<br>
-          Aqui você tera suporte para aprender mais com professores que gostam da musica que você gosta!
+    <!-- banner -->
+    <div
+      style="
+        background-image: url(https://www.seculodiario.com.br/images/s/Cultura/gustavo_bastos/b2ap3_large_lordofchaos_redesociais.jpg);
+        background-size: cover;
+      "
+      class="div_banner"
+    >
+      <div class="descricao">
+        <div
+          class="show"
+          style="
+            background-image: url(img/shows-coronavirus.jpg);
+            background-size: cover;
+          "
+        >
+          <span class="titulo">Toque como seus Herois</span>
+        </div>
+        <div class="explicacao">
+          <div id="txt_explic" class="explicando">
+            Bem vindo a Lost Music! <br />
+            Somos um site que ajuda Pessoas a seguirem seus sonhos na musica<br />
+            Aqui você tera suporte para aprender mais com professores que gostam
+            da musica que você gosta!
+            <div  class="btn_line">
+              <a href="Cadastro_login.html"><button  id="btn" class="btn_cad">Cadastrar</button></a>
+              <button id="btn" class="btn_login">Valores</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- footer -->
+    <div class="footer">
+      <div class="container_footer">
+        <div class="div_social">
+          <img class="logo_social" src="img/whatsapp.png" alt="" />
+          <img class="logo_social" src="img/instagram.png" alt="" />
+          <img class="logo_social" src="img/facebook (1).png" alt="" />
+        </div>
+        <br />
 
-  </div>
-  <!-- footer -->
-  <div class="footer">
-    <div class="container_footer">
-      <div class="div_social">
-        <img class="logo_social" src="img/whatsapp.png" alt="" />
-        <img class="logo_social" src="img/instagram.png" alt="" />
-        <img class="logo_social" src="img/facebook (1).png" alt="" />
-      </div>
-      <br />
-
-      <div class="div_txt">
-        <h5>Suporte</h5>
-        <h5>INFO</h5>
-        <h5>INFO</h5>
+        <div class="div_txt">
+          <h5>Suporte</h5>
+          <h5>INFO</h5>
+          <h5>INFO</h5>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
 <script>
+  var observer = new IntersectionObserver(
+    function (entries) {
+      // isIntersecting is true when element and viewport are overlapping
+      // isIntersecting is false when element and viewport don't overlap
+      if (entries[0].isIntersecting == true) {
+        txt_explic.style.animation = "chegada 1s forwards";
+        txt_explic.classList.toggle("chegada");
+    
+     
+      }
+    },
+    { threshold: [0.2] }
+  );
+  observer.observe(document.getElementById("txt_explic"));  
+
   function logo_over() {
     logo.src = "img/electric-guitar.png";
   }
