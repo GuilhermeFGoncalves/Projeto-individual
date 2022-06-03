@@ -49,8 +49,8 @@
 
   <!-- banner -->
   <div style="background-image: url(img/1280px-Megadeth1991AL.jpg)" class="banner">
-    <div id="alert_erro" class="alert_erro">
-      <h4 id="txt_alert_erro"></h4>
+    <div id="sucesso" class="sucesso">
+      <h4 id="txt_sucesso"></h4>
     </div>
     <div class="container_sug">
       <div class="container_esq">
@@ -108,6 +108,10 @@
 
 </html>
 <script>
+  function sumir(){
+    document.getElementById("sucesso").style.display="none"
+
+  }
   function logo_over() {
     logo.src = "img/electric-guitar.png";
   }
@@ -177,9 +181,10 @@
 
 
         if (resposta.ok) {
-          setTimeout(() => {
-            window.location = "musicas.html";
-          }, "2000");
+          document.getElementById("sucesso").style.display="block";
+          txt_sucesso.innerHTML=`Obrigado pela sugestão!`;
+          setTimeout(sumir,1000);
+          
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
