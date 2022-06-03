@@ -7,7 +7,10 @@ rgb(94, 91, 91) cinza
 
 
 */
-
+.icon{
+  height: 1vh;
+  width: 1vh;
+}
 body {
   margin: 0%;
   padding: 0%;

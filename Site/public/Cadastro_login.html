@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Lost music</title>
+    <link rel="icon" href="img/vic-favicon.png">
     <link rel="stylesheet" href="CSS/cadastro.css">
     <link rel="stylesheet" href="CSS/login.css">
     <link rel="stylesheet" href="CSS/css_geral.css">
@@ -17,10 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
 </head>
 
 <body style="background-image:url(img/shows-coronavirus.jpg);background-size: cover;">
@@ -101,7 +99,7 @@
 
 
 
-        </div>  
+        </div>
 
 
     </div>
@@ -115,7 +113,7 @@
 
 </html>
 <script>
-    function sumir_txt(){
+    function sumir_txt() {
         document.getElementById("alert_erro").style.display = "none"
 
     }
@@ -132,7 +130,7 @@
                 sumir_txt()
             }, 1000);
 
-            
+
             return false;
         }
 
@@ -174,14 +172,14 @@
 
             } else {
                 alert_erro.style.display = "block"
-            txt_alert_erro.innerHTML = "Houve um erro ao tentar realizar o login!";
-            setTimeout(() => {
-                sumir_txt()
-            }, 1000);
+                txt_alert_erro.innerHTML = "Houve um erro ao tentar realizar o login!";
+                setTimeout(() => {
+                    sumir_txt()
+                }, 1000);
 
                 console.log("Houve um erro ao tentar realizar o login!");
 
-             
+
             }
 
         }).catch(function (erro) {
@@ -266,20 +264,20 @@
                     cad()
                 } else {
                     console.log(erro);
-            alert_erro.style.display = "block"
-            txt_alert_erro.innerHTML = "Erro no Cadastro";
-            setTimeout(() => {
-                sumir_txt()
-            }, 2000);
+                    alert_erro.style.display = "block"
+                    txt_alert_erro.innerHTML = "Erro no Cadastro";
+                    setTimeout(() => {
+                        sumir_txt()
+                    }, 2000);
                     throw ("Houve um erro ao tentar realizar o cadastro!");
                     return false
                 }
             }).catch(function (resposta) {
                 alert_erro.style.display = "block"
-            txt_alert_erro.innerHTML = "Erro no Cadastro";
-            setTimeout(() => {
-                sumir_txt()
-            }, 2000);
+                txt_alert_erro.innerHTML = "Erro no Cadastro";
+                setTimeout(() => {
+                    sumir_txt()
+                }, 2000);
                 console.log(`#ERRO: ${resposta}`);
                 console.log(erro);
 
@@ -288,7 +286,7 @@
             return false;
         }
 
-    
+
     }
     function cad() {
         container_cadastro.style.animation = "ida 1s forwards";
