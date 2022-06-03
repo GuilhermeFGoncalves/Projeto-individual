@@ -84,6 +84,7 @@ body::-webkit-scrollbar-thumb {
   align-self: inherit;
   transition: 300ms;
   font-size: 2vh;
+  font-weight: 1000;
 }
 
 .header h5:hover {
