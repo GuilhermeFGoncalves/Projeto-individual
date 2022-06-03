@@ -45,8 +45,13 @@ outline: none;
 border: 0ch;
 border-bottom: 1px solid white;
 width: 70%;
+color: white;
+text-align: center;
 transition: 400ms;
 background-color: rgba(255, 255, 255, 0);
+}
+.inp_sug::placeholder{
+    color: white;
 }
 .inp_sug:focus{
 border-bottom: 1px solid #5A0002;

@@ -1,123 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost music</title>
 
-    <link rel="stylesheet" href="CSS/sugestao.css" />
-    <link rel="stylesheet" href="CSS/css_geral.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost music</title>
 
-  <body onload="checar()" >
-    <!-- Header -->
+  <link rel="stylesheet" href="CSS/sugestao.css" />
+  <link rel="stylesheet" href="CSS/css_geral.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+</head>
 
-    <nav id="header" class="header">
-      <div class="container_header">
-        <a href="index-logado.html"
-          ><img
-            id="logo"
-            onmouseout="logo_out()"
-            onmouseover="logo_over()"
-            class="logo"
-            src="img/electric-guitar-black.png"
-            alt=""
-          />
-        </a>
-        <h5 class="atual">Sobre nos</h5>
-        <a href="valores.html"><h5>Valores</h5></a> 
-        <a href="musicas.html">
-          <h5>Musicas</h5>
-        </a>
+<body onload="checar()">
+  <!-- Header -->
 
-        <div class="div_search">
-          <input class="search" type="text" />
-          <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
-        </div>
-        <div class="dropdown">
-          <div class="logo_perfil"><img  height="40px" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt=""></div> 
-           <div class="dropdown_menu">
-     <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
+  <nav id="header" class="header">
+    <div class="container_header">
+      <a href="index-logado.html"><img id="logo" onmouseout="logo_out()" onmouseover="logo_over()" class="logo"
+          src="img/electric-guitar-black.png" alt="" />
+      </a>
+      <h5 class="atual">Sobre nos</h5>
+      <a href="valores.html">
+        <h5>Valores</h5>
+      </a>
+      <a href="musicas.html">
+        <h5>Musicas</h5>
+      </a>
 
-               <div  onclick="sair()" class="drop_div">Sair </div class="drop_div">
-           </div>
-       </div>
+      <div class="div_search">
+        <input class="search" type="text" />
+        <img class="lupa_search" src="img/lupa-arredondada.png" alt="" />
       </div>
-      
-    </nav>
-
-    <!-- banner -->
-    <div  style="background-image: url(img/1280px-Megadeth1991AL.jpg)"
-      class="banner"
-    >
-      <div id="alert_erro" class="alert_erro">
-        <h4 id="txt_alert_erro"></h4>
-      </div>
-      <div class="container_sug">
-        <div class="container_esq">
-          <div class="div_titulo">Preencha o formulario</div>
-      
-          <div class="div_inp">
-            Url :<input class="inp_sug" type="text" name="" id="url_inp" />
-          </div>
-          <div class="div_inp">
-            Banda :<input class="inp_sug" type="text" name="" id="banda_inp" />
-          </div>
-          <div class="div_inp">
-            Musica :<input
-              class="inp_sug"
-              type="text"
-              name=""
-              id="musica_inp"
-            />
-          </div>
-          <div class="div_combo">
-            <select class="select" name="estilo" id="estilo">
-              <option selected-disable value="">Genero</option>
-              <option value="Heavy_Metal">Heavy Metal</option>
-              <option value="thrash_Metal">Thrash Metal</option>
-              <option value="Black_metal">Black Metal</option>
-              <option value="Nu_metal">Nu Metal</option>
-              <option value="Power_metal">Power Metal</option>
-              <option value="Death_metal">Death Metal</option>
-              <option value="outro">Outro</option>
-            </select>
-          </div>
-          <button onclick="cadastrar()" class="btn_enviar">Verificar</button>
+      <div class="dropdown">
+        <div class="logo_perfil"><img height="40px" src="https://pic.onlinewebfonts.com/svg/img_550783.png" alt="">
         </div>
-        <div class="container_dir">
-          <div id="container_dir" class="container_video">
-            <div class="div_titulo">Obrigado pela sugestão</div>
-            <h4 id="musica_banda"></h4>
-          </div>
+        <div class="dropdown_menu">
+          <div class="drop_div"><a href="perfil.html">Perfil</a> </div class="drop_div">
+
+          <div onclick="sair()" class="drop_div">Sair </div class="drop_div">
         </div>
       </div>
     </div>
-    <!-- footer -->
-    <div class="footer">
-      <div class="container_footer">
-        <div class="div_social">
-          <img class="logo_social" src="img/whatsapp.png" alt="" />
-          <img class="logo_social" src="img/instagram.png" alt="" />
-          <img class="logo_social" src="img/facebook (1).png" alt="" />
-        </div>
-        <br />
 
-        <div class="div_txt">
-          <h5>Suporte</h5>
-          <h5>INFO</h5>
-          <h5>INFO</h5>
+  </nav>
+
+  <!-- banner -->
+  <div style="background-image: url(img/1280px-Megadeth1991AL.jpg)" class="banner">
+    <div id="alert_erro" class="alert_erro">
+      <h4 id="txt_alert_erro"></h4>
+    </div>
+    <div class="container_sug">
+      <div class="container_esq">
+        <div class="div_titulo">Preencha o formulario</div>
+
+        <div class="div_inp">
+          <input placeholder="Musica" class="inp_sug" type="text" name="" id="musica_inp" />
+        </div>
+        <div class="div_inp">
+          <input placeholder="Banda" class="inp_sug" type="text" name="" id="banda_inp" />
+        </div>
+        <div class="div_inp">
+          <input placeholder="Url da Musica" class="inp_sug" type="text" name="" id="url_inp" />
+        </div>
+        <div class="div_combo">
+          <select class="select" name="estilo" id="estilo">
+            <option selected-disable value="">Genero</option>
+            <option value="Heavy_Metal">Heavy Metal</option>
+            <option value="thrash_Metal">Thrash Metal</option>
+            <option value="Black_metal">Black Metal</option>
+            <option value="Nu_metal">Nu Metal</option>
+            <option value="Power_metal">Power Metal</option>
+            <option value="Death_metal">Death Metal</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <button onclick="cadastrar()" class="btn_enviar">Verificar</button>
+      </div>
+      <div class="container_dir">
+        <div id="container_dir" class="container_video">
+          <div class="div_titulo">Obrigado pela sugestão</div>
+          <h4 id="musica_banda"></h4>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+  <!-- footer -->
+  <div class="footer">
+    <div class="container_footer">
+      <div class="div_social">
+        <img class="logo_social" src="img/whatsapp.png" alt="" />
+        <img class="logo_social" src="img/instagram.png" alt="" />
+        <img class="logo_social" src="img/facebook (1).png" alt="" />
+      </div>
+      <br />
+
+      <div class="div_txt">
+        <h5>Suporte</h5>
+        <h5>INFO</h5>
+        <h5>INFO</h5>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
 <script>
   function logo_over() {
@@ -148,74 +136,74 @@
   function cadastrar() {
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-  
+
     var urlVar = url_inp.value;
     var bandaVar = banda_inp.value;
     var musicaVar = musica_inp.value;
     var estiloVar = estilo.value;
-    var id=sessionStorage.ID_USUARIO
+    var id = sessionStorage.ID_USUARIO
 
 
-      if (
+    if (
       urlVar == "" ||
       musicaVar == "" ||
-      estiloVar == "" 
-     ) {
-        txt_alert_erro.innerHTML =
-          "(Mensagem de erro para todos os campos em branco)";
-
-        return false;
-      } 
-
-      // Enviando o valor da nova input
-      fetch("/usuarios/sugestao", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          // crie um atributo que recebe o valor recuperado aqui
-          // Agora vá para o arquivo routes/usuario.js
-          urlServer: urlVar,
-          bandaServer: bandaVar,
-          musicaServer: musicaVar,
-          estiloServer: estiloVar,
-          idServer:id,
-
-        }),
-      })
-        .then(function (resposta) {
-          console.log("resposta: ", resposta);
-      
-
-          if (resposta.ok) {
-            setTimeout(() => {
-              window.location = "musicas.html";
-            }, "2000");
-          } else {
-            throw "Houve um erro ao tentar realizar o cadastro!";
-          }
-        })
-        .catch(function (resposta) {
-          console.log(`#ERRO: ${resposta}`);
-        });
+      estiloVar == ""
+    ) {
+      txt_alert_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
 
       return false;
     }
-    function sair() {
-        sessionStorage.clear()
-        checar()
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/sugestao", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        urlServer: urlVar,
+        bandaServer: bandaVar,
+        musicaServer: musicaVar,
+        estiloServer: estiloVar,
+        idServer: id,
+
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+
+        if (resposta.ok) {
+          setTimeout(() => {
+            window.location = "musicas.html";
+          }, "2000");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+  function sair() {
+    sessionStorage.clear()
+    checar()
+
+  }
+
+  function checar() {
+    if (sessionStorage.ID_USUARIO == null) {
+      window.location = "index.html"
 
     }
 
-    function checar() {
-        if (sessionStorage.ID_USUARIO == null) {
-            window.location = "index.html"
 
-        }
+  }
 
 
-   } 
-
-  
 </script>

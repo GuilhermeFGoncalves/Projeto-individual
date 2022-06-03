@@ -52,8 +52,8 @@ body {
 }
 
 .container_txt h3 {
-  color: black;
-  font-size: 17pt;
+  color: white;
+  font-size: 22pt;
   font-weight: 600;
 }
 
@@ -61,8 +61,8 @@ body {
   height: 10vh;
   width: 32vh;
   border-radius: 10vh;
-  background-color: transparent;
-  color: rgb(0, 0, 0);
+  background-color: #1b263142;
+  color:black;
   border: 1px solid rgb(0, 0, 0);
   font-size: 3vh;
   font-weight: 300;
@@ -72,7 +72,7 @@ body {
 
 .btn_comecar:hover {
   width: 40vh;
-  color: #1B2631;
+  color: #ffff;
   border: 1px solid #1B2631;
 
 }
@@ -194,6 +194,7 @@ body {
   text-align: center;
   font-family: 'Staatliches', cursive;
   padding-top: 4vh;
+  pointer-events: none;
 }
 
 .container_valores:hover {
@@ -206,7 +207,7 @@ body {
   background-color: #ff6600;
   transform: translateY(-45vh);
   opacity: 1;
-
+pointer-events: all;
 }
 
 
