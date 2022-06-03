@@ -60,7 +60,7 @@ body{
   background-color: #1b2631a1;
   height: 80%;
   animation-name: vinda;
-  animation-duration: 900ms;
+  animation-duration: 800ms;
   box-shadow: 1px 1px 1em rgba(255, 255, 255, 0.199);
 }
 
@@ -123,7 +123,7 @@ body{
 
 select {
   height: 30px;
-  color: white;
+  color: black;
   width: 50%;
   transition: 200ms;
   box-shadow: 0 4px 15px rgba(241, 241, 241, 0.192);
