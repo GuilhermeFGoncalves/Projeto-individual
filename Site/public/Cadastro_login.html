@@ -117,6 +117,7 @@
         document.getElementById("alert_erro").style.display = "none"
 
     }
+
     function entrar() {
 
         var emailVar = email_input.value;
@@ -155,14 +156,14 @@
                 resposta.json().then(json => {
                     console.log(json);
 
-
+                    alert(json.dtCadastro)
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.usuario;
                     sessionStorage.ID_USUARIO = json.id;
                     sessionStorage.INSTRUMENTO = json.instrumento;
                     sessionStorage.BANDAFAVORITA = json.bandaFavorita;
                     sessionStorage.NIVEL = json.nivel;
-                    sessionStorage.DATA = json.DTinicio;
+                    sessionStorage.DATA = json.dtCadastro;
 
                     setTimeout(function () {
                         window.location = "index-logado.html";
@@ -288,6 +289,7 @@
 
 
     }
+
     function cad() {
         container_cadastro.style.animation = "ida 1s forwards";
         container_cadastro.classList.toggle('ida');
@@ -300,12 +302,14 @@
 
 
     }
+
     function esperar() {
         container_login.style.animation = "subir 1s forwards";
         document.getElementById("container_login").style.display = "flex"
 
 
     }
+
     function log() {
         container_login.style.animation = "subida_dois  1s forwards";
         container_login.classList.toggle('subida');
