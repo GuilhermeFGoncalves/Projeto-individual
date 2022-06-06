@@ -16,7 +16,8 @@ select *from sugestao;
 	);
 
 	CREATE TABLE sugestao (
-		id INT PRIMARY KEY AUTO_INCREMENT,
+		id INT PRIMARY KEY 
+        AUTO_INCREMENT,
 		url VARCHAR(100),
 		banda VARCHAR(150),
 		musica VARCHAR(150),
@@ -24,6 +25,14 @@ select *from sugestao;
 		fk_usuario INT,
 		FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 	); 
+    INSERT INTO sugestao VALUES
+    (null,'om','Megadeth','ty','thrash_Metal','1'),
+    (null,'om','Megadeth','ty','Heavy_Metal','1'),
+    (null,'om','Megadeth','ty','Black_metal','1'),
+    (null,'om','Megadeth','ty','Nu_metal','1'),
+    (null,'om','Megadeth','ty','Power_metal','1'),
+    (null,'om','Megadeth','ty','Death_metal','1'),
+    (null,'om','Megadeth','ty','outro','1');
     drop database lost_music;
 
 

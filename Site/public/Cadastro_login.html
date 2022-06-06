@@ -154,9 +154,10 @@
                 console.log(resposta);
 
                 resposta.json().then(json => {
+                    alert(json.dtCadastro);
                     console.log(json);
 
-                    alert(json.dtCadastro)
+
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.usuario;
                     sessionStorage.ID_USUARIO = json.id;
